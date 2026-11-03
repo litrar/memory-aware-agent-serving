@@ -3,13 +3,13 @@
 # Sourced by each group script; not meant to be run on its own.
 #
 # Every setting can be overridden from the environment, e.g.
-#   THREADS=8 bash script/H_conditions.sh
-#   TS=20261029-1200 bash script/H_conditions.sh   # resume a group: finished experiments are skipped
-#   TEST=1 N=1 C=1 SHORT_DELAY=0 LONG_DELAY=0.001 bash script/H_conditions.sh
-#   DRY_RUN=1 bash script/H_conditions.sh   # print the experiment.py commands only
+#   THREADS=8 bash scripts/H_conditions.sh
+#   TS=20261029-1200 bash scripts/H_conditions.sh   # resume a group: finished experiments are skipped
+#   TEST=1 N=1 C=1 SHORT_DELAY=0 LONG_DELAY=0.001 bash scripts/H_conditions.sh
+#   DRY_RUN=1 bash scripts/H_conditions.sh   # print the experiment.py commands only
 set -uo pipefail
 
-REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"    # scripts live in <repo>/script/
+REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"    # scripts live in <repo>/scripts/
 cd "$REPO"
 
 LLAMA_SERVER="${LLAMA_SERVER:-/home/ec2-user/llama.cpp/build/bin/llama-server}"
@@ -113,7 +113,7 @@ if results:
 else:
     print(f'no finished runs in {group}')
 EOF
-  "$PYTHON" -B script/plot_group.py "$GROUP_DIR" || echo "!! plot failed"
+  "$PYTHON" -B scripts/plot_group.py "$GROUP_DIR" || echo "!! plot failed"
   if [[ -s $FAILED ]]; then echo "failed experiments:"; cat "$FAILED"; fi
   return 0
 }

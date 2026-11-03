@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # H. SS/SL/LS/LL x two tool delays x prompt-prefix reuse on/off: 16 runs at fixed C.
 # Reuses common.sh's execution/resume/logging and plot_group.py's charts.
-#   bash script/H_conditions.sh
-#   N=4 SHORT_DELAY=0 LONG_DELAY=5 C=2 bash script/H_conditions.sh
-#   DRY_RUN=1 bash script/H_conditions.sh
-#   TEST=1 N=1 C=1 SHORT_DELAY=0 LONG_DELAY=0.001 bash script/H_conditions.sh
+#   bash scripts/H_conditions.sh
+#   N=4 SHORT_DELAY=0 LONG_DELAY=5 C=2 bash scripts/H_conditions.sh
+#   DRY_RUN=1 bash scripts/H_conditions.sh
+#   TEST=1 N=1 C=1 SHORT_DELAY=0 LONG_DELAY=0.001 bash scripts/H_conditions.sh
 # Reuse TS to resume with identical settings; changed settings require a new TS.
 source "$(dirname "${BASH_SOURCE[0]}")/common.sh"
 N="${N:-6}"

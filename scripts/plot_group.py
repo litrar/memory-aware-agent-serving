@@ -9,7 +9,7 @@ This script compares the experiments of a group side by side and draws a timelin
   timelines/<experiment>.png   per run over time: each task's queue / LLM / tool segments, slot context
                                tokens against n_ctx, and server memory (from events.jsonl / memory.jsonl)
 
-Usage (from the repo root):  python -B script/plot_group.py results/H-conditions-<TS> [more groups...]
+Usage (from the repo root):  python -B scripts/plot_group.py results/H-conditions-<TS> [more groups...]
 """
 import argparse
 import csv

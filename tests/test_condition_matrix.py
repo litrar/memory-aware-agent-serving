@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 import agent
 
-SCRIPT = ROOT / 'script/H_conditions.sh'
+SCRIPT = ROOT / 'scripts/H_conditions.sh'
 
 
 class ConditionMatrix(unittest.TestCase):
