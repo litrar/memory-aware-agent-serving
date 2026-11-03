@@ -1,0 +1,770 @@
+# Eight fixed pilot tasks: SS / SL / LS / LL for each document.
+# Multiline strings preserve document paragraphs and instructions verbatim.
+
+[[tasks]]
+schema_version = 1
+task_id = "cooling-SS"
+doc_id = "cooling"
+profile = "SS"
+context_class = "short"
+response_class = "short"
+doc = '''
+Harborview Cooling Center: Pilot Results
+
+Harborview operated a cooling center at the Community Hall for six weeks. It opened on 30 weekdays, from 1 p.m. to 7 p.m.
+
+Staff recorded 312 visits. A person could visit more than once, and the attendance system did not identify unique visitors.
+
+The recorded pilot expenditure was $4,800. This covered temporary staff, cooling equipment and electricity, supplies, and outreach. The city provided the hall without charging the pilot.
+
+An optional exit survey received 68 responses. Of these, 54 said they would return during a future heat event, 9 were unsure, and 5 would not return. These responses describe survey participants; they do not establish the opinions of all visitors.
+
+The pilot did not collect health-outcome data or include a comparison neighborhood. Therefore, the available evidence cannot establish whether the center reduced heat-related illness.
+
+The office has proposed another pilot, but it has not been approved.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write one paragraph of 60–90 English words.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Prioritize these facts over dates, opening hours, and background.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write one paragraph of 60–90 English words.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Prioritize these facts over dates, opening hours, and background.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write one paragraph of 60–90 English words.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Prioritize these facts over dates, opening hours, and background.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 192
+final_tokens = 192
+llm_seed = 0
+target_words = [
+  60,
+  90,
+]
+required_facts = [
+  { id = "A1a", claim = "The pilot recorded 312 visits." },
+  { id = "A1b", claim = "Repeat visits were possible; the unique visitor count was unknown." },
+  { id = "A2", claim = "Recorded pilot expenditure was $4,800." },
+  { id = "A3a", claim = "The pilot did not establish a reduction in heat-related illness." },
+  { id = "A3b", claim = "Health-outcome data and a comparison neighborhood were absent." },
+]
+
+[[tasks]]
+schema_version = 1
+task_id = "cooling-SL"
+doc_id = "cooling"
+profile = "SL"
+context_class = "short"
+response_class = "long"
+doc = '''
+Harborview Cooling Center: Pilot Results
+
+Harborview operated a cooling center at the Community Hall for six weeks. It opened on 30 weekdays, from 1 p.m. to 7 p.m.
+
+Staff recorded 312 visits. A person could visit more than once, and the attendance system did not identify unique visitors.
+
+The recorded pilot expenditure was $4,800. This covered temporary staff, cooling equipment and electricity, supplies, and outreach. The city provided the hall without charging the pilot.
+
+An optional exit survey received 68 responses. Of these, 54 said they would return during a future heat event, 9 were unsure, and 5 would not return. These responses describe survey participants; they do not establish the opinions of all visitors.
+
+The pilot did not collect health-outcome data or include a comparison neighborhood. Therefore, the available evidence cannot establish whether the center reduced heat-related illness.
+
+The office has proposed another pilot, but it has not been approved.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 768
+final_tokens = 768
+llm_seed = 0
+target_words = [
+  300,
+  400,
+]
+required_facts = [
+  { id = "A1a", claim = "The pilot recorded 312 visits." },
+  { id = "A1b", claim = "Repeat visits were possible; the unique visitor count was unknown." },
+  { id = "A2", claim = "Recorded pilot expenditure was $4,800." },
+  { id = "A3a", claim = "The pilot did not establish a reduction in heat-related illness." },
+  { id = "A3b", claim = "Health-outcome data and a comparison neighborhood were absent." },
+]
+
+[[tasks]]
+schema_version = 1
+task_id = "cooling-LS"
+doc_id = "cooling"
+profile = "LS"
+context_class = "long"
+response_class = "short"
+doc = '''
+Harborview Cooling Center: Pilot Results
+
+Harborview operated a cooling center at the Community Hall for six weeks. It opened on 30 weekdays, from 1 p.m. to 7 p.m.
+
+Staff recorded 312 visits. A person could visit more than once, and the attendance system did not identify unique visitors.
+
+The recorded pilot expenditure was $4,800. This covered temporary staff, cooling equipment and electricity, supplies, and outreach. The city provided the hall without charging the pilot.
+
+An optional exit survey received 68 responses. Of these, 54 said they would return during a future heat event, 9 were unsure, and 5 would not return. These responses describe survey participants; they do not establish the opinions of all visitors.
+
+The pilot did not collect health-outcome data or include a comparison neighborhood. Therefore, the available evidence cannot establish whether the center reduced heat-related illness.
+
+The office has proposed another pilot, but it has not been approved.
+
+Operational Background and Supporting Notes
+
+The Community Hall was selected because it already had an accessible entrance, public restrooms, tables, chairs, and a room that could be separated from other activities. Selecting an existing building allowed the office to begin the pilot without construction work. The office did not compare the hall with alternative locations. Convenient access was a reason for choosing the site, but travel times were not measured.
+
+The center was intended to provide a place to rest during hot afternoons. Staff offered drinking water and printed heat-safety information. They did not provide medical treatment, individual medical assessments, transportation, or overnight accommodation. Visitors who needed services outside this scope were directed to existing city information channels. The pilot did not record what happened after such referrals.
+
+Opening procedures began before public access. Staff checked the entrance, arranged chairs, inspected water supplies, and confirmed that the room was ready. Closing procedures included collecting unused materials, checking the room, and completing the daily log. The published opening hours described access for visitors; they were not a measurement of total staff working time.
+
+Two temporary staff members were scheduled on each open day. Their duties included welcoming visitors, recording visits, answering basic questions, and keeping supplies available. Permanent public-health employees planned and supervised the pilot. Their salaries were outside the recorded $4,800 expenditure. Consequently, that figure should not be described as a complete economic valuation of every resource used.
+
+The expenditure ledger contained four categories: $2,700 for temporary staff, $1,350 for cooling equipment and electricity, $450 for water and paper supplies, and $300 for printing and outreach. These categories add to the recorded total. The ledger did not assign a monetary value to use of the city-owned hall. A future pilot at a different venue might therefore have a different cost structure even if attendance were similar.
+
+Staff recorded 186 visits between 1 p.m. and 4 p.m. and 126 visits between 4 p.m. and 7 p.m. These counts add to 312. They indicate when visits were recorded, not how long visitors stayed. A visitor arriving before 4 p.m. could remain afterward. The records cannot be used to calculate the number of people simultaneously present or the average duration of a visit.
+
+The daily log showed a maximum of 24 visits on one open day and a minimum of 2 on another. Dividing 312 visits by 30 open days gives 10.4 visits per open day. This average does not describe a typical person's behavior. It also does not show whether attendance changed because of temperature, publicity, transport availability, or other factors; those relationships were not analyzed.
+
+The center distributed 207 printed information cards and served 438 cups of water. Staff did not track which visitors received cards, whether they read them, or whether they changed their behavior. Visitors could take multiple cups of water. Neither the card count nor the cup count provides an independent estimate of unique attendance.
+
+Outreach consisted of library posters, neighborhood email notices, and information at two bus stops. The office did not purchase advertisements. Visitors were not systematically asked how they heard about the center. The records therefore cannot identify which outreach method produced the most visits or whether any part of the neighborhood was poorly reached.
+
+The exit survey was optional and was offered when staff were available. It was not randomly assigned, and the office did not link survey responses to attendance records. The team cannot calculate a response rate among unique visitors. The 54 positive responses show that some respondents expected to return, but intended future use is different from observed future attendance.
+
+No individual health information was collected. Staff did not measure changes in symptoms, emergency visits, or hospital admissions. There was also no comparison neighborhood. Attendance and survey results can support an operational description of the pilot, but they cannot establish a causal effect on heat-related illness.
+
+For another pilot, the office proposed recording anonymous visit duration estimates and asking how visitors heard about the center. It also proposed reviewing whether opening later on very hot days would be practical. These are planning suggestions. The office has not approved a new schedule, committed additional funding, or established that longer hours would improve health outcomes.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write one paragraph of 60–90 English words.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Prioritize these facts over dates, opening hours, and background.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write one paragraph of 60–90 English words.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Prioritize these facts over dates, opening hours, and background.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write one paragraph of 60–90 English words.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Prioritize these facts over dates, opening hours, and background.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 192
+final_tokens = 192
+llm_seed = 0
+target_words = [
+  60,
+  90,
+]
+required_facts = [
+  { id = "A1a", claim = "The pilot recorded 312 visits." },
+  { id = "A1b", claim = "Repeat visits were possible; the unique visitor count was unknown." },
+  { id = "A2", claim = "Recorded pilot expenditure was $4,800." },
+  { id = "A3a", claim = "The pilot did not establish a reduction in heat-related illness." },
+  { id = "A3b", claim = "Health-outcome data and a comparison neighborhood were absent." },
+]
+
+[[tasks]]
+schema_version = 1
+task_id = "cooling-LL"
+doc_id = "cooling"
+profile = "LL"
+context_class = "long"
+response_class = "long"
+doc = '''
+Harborview Cooling Center: Pilot Results
+
+Harborview operated a cooling center at the Community Hall for six weeks. It opened on 30 weekdays, from 1 p.m. to 7 p.m.
+
+Staff recorded 312 visits. A person could visit more than once, and the attendance system did not identify unique visitors.
+
+The recorded pilot expenditure was $4,800. This covered temporary staff, cooling equipment and electricity, supplies, and outreach. The city provided the hall without charging the pilot.
+
+An optional exit survey received 68 responses. Of these, 54 said they would return during a future heat event, 9 were unsure, and 5 would not return. These responses describe survey participants; they do not establish the opinions of all visitors.
+
+The pilot did not collect health-outcome data or include a comparison neighborhood. Therefore, the available evidence cannot establish whether the center reduced heat-related illness.
+
+The office has proposed another pilot, but it has not been approved.
+
+Operational Background and Supporting Notes
+
+The Community Hall was selected because it already had an accessible entrance, public restrooms, tables, chairs, and a room that could be separated from other activities. Selecting an existing building allowed the office to begin the pilot without construction work. The office did not compare the hall with alternative locations. Convenient access was a reason for choosing the site, but travel times were not measured.
+
+The center was intended to provide a place to rest during hot afternoons. Staff offered drinking water and printed heat-safety information. They did not provide medical treatment, individual medical assessments, transportation, or overnight accommodation. Visitors who needed services outside this scope were directed to existing city information channels. The pilot did not record what happened after such referrals.
+
+Opening procedures began before public access. Staff checked the entrance, arranged chairs, inspected water supplies, and confirmed that the room was ready. Closing procedures included collecting unused materials, checking the room, and completing the daily log. The published opening hours described access for visitors; they were not a measurement of total staff working time.
+
+Two temporary staff members were scheduled on each open day. Their duties included welcoming visitors, recording visits, answering basic questions, and keeping supplies available. Permanent public-health employees planned and supervised the pilot. Their salaries were outside the recorded $4,800 expenditure. Consequently, that figure should not be described as a complete economic valuation of every resource used.
+
+The expenditure ledger contained four categories: $2,700 for temporary staff, $1,350 for cooling equipment and electricity, $450 for water and paper supplies, and $300 for printing and outreach. These categories add to the recorded total. The ledger did not assign a monetary value to use of the city-owned hall. A future pilot at a different venue might therefore have a different cost structure even if attendance were similar.
+
+Staff recorded 186 visits between 1 p.m. and 4 p.m. and 126 visits between 4 p.m. and 7 p.m. These counts add to 312. They indicate when visits were recorded, not how long visitors stayed. A visitor arriving before 4 p.m. could remain afterward. The records cannot be used to calculate the number of people simultaneously present or the average duration of a visit.
+
+The daily log showed a maximum of 24 visits on one open day and a minimum of 2 on another. Dividing 312 visits by 30 open days gives 10.4 visits per open day. This average does not describe a typical person's behavior. It also does not show whether attendance changed because of temperature, publicity, transport availability, or other factors; those relationships were not analyzed.
+
+The center distributed 207 printed information cards and served 438 cups of water. Staff did not track which visitors received cards, whether they read them, or whether they changed their behavior. Visitors could take multiple cups of water. Neither the card count nor the cup count provides an independent estimate of unique attendance.
+
+Outreach consisted of library posters, neighborhood email notices, and information at two bus stops. The office did not purchase advertisements. Visitors were not systematically asked how they heard about the center. The records therefore cannot identify which outreach method produced the most visits or whether any part of the neighborhood was poorly reached.
+
+The exit survey was optional and was offered when staff were available. It was not randomly assigned, and the office did not link survey responses to attendance records. The team cannot calculate a response rate among unique visitors. The 54 positive responses show that some respondents expected to return, but intended future use is different from observed future attendance.
+
+No individual health information was collected. Staff did not measure changes in symptoms, emergency visits, or hospital admissions. There was also no comparison neighborhood. Attendance and survey results can support an operational description of the pilot, but they cannot establish a causal effect on heat-related illness.
+
+For another pilot, the office proposed recording anonymous visit duration estimates and asking how visitors heard about the center. It also proposed reviewing whether opening later on very hot days would be practical. These are planning suggestions. The office has not approved a new schedule, committed additional funding, or established that longer hours would improve health outcomes.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 768
+final_tokens = 768
+llm_seed = 0
+target_words = [
+  300,
+  400,
+]
+required_facts = [
+  { id = "A1a", claim = "The pilot recorded 312 visits." },
+  { id = "A1b", claim = "Repeat visits were possible; the unique visitor count was unknown." },
+  { id = "A2", claim = "Recorded pilot expenditure was $4,800." },
+  { id = "A3a", claim = "The pilot did not establish a reduction in heat-related illness." },
+  { id = "A3b", claim = "Health-outcome data and a comparison neighborhood were absent." },
+]
+
+[[tasks]]
+schema_version = 1
+task_id = "repair-SS"
+doc_id = "repair"
+profile = "SS"
+context_class = "short"
+response_class = "short"
+doc = '''
+Pinebridge Repair Pilot: Results
+
+Pinebridge operated a free household-item repair pilot at its public library on 12 Saturdays.
+
+The team recorded 96 item submissions from 71 distinct visitors. Some visitors submitted another item on a later Saturday.
+
+Volunteers recorded 58 completed repairs. Of those 58 items, 41 passed a functional test at the end of the session. The other 17 had no recorded final test, so their working condition was not confirmed by the records.
+
+Another 21 items were diagnosed but not repaired, and 17 were not fully assessed. These groups are separate from the 58 completed repairs.
+
+Parts and consumable supplies cost $620. Residents were not charged.
+
+The team did not follow up with visitors after the sessions. Therefore, the records cannot establish whether repaired items continued working at home.
+
+A second pilot has been proposed but has not been approved.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write one paragraph of 60–90 English words.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Prioritize these facts over dates, opening hours, and background.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write one paragraph of 60–90 English words.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Prioritize these facts over dates, opening hours, and background.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write one paragraph of 60–90 English words.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Prioritize these facts over dates, opening hours, and background.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 192
+final_tokens = 192
+llm_seed = 0
+target_words = [
+  60,
+  90,
+]
+required_facts = [
+  { id = "B1", claim = "There were 96 item submissions from 71 distinct visitors." },
+  { id = "B2a", claim = "There were 58 completed repairs." },
+  { id = "B2b", claim = "Only 41 of the completed repairs had a recorded successful final functional test." },
+  { id = "B3a", claim = "Continued operation at home was unknown." },
+  { id = "B3b", claim = "There was no follow-up after the sessions." },
+]
+
+[[tasks]]
+schema_version = 1
+task_id = "repair-SL"
+doc_id = "repair"
+profile = "SL"
+context_class = "short"
+response_class = "long"
+doc = '''
+Pinebridge Repair Pilot: Results
+
+Pinebridge operated a free household-item repair pilot at its public library on 12 Saturdays.
+
+The team recorded 96 item submissions from 71 distinct visitors. Some visitors submitted another item on a later Saturday.
+
+Volunteers recorded 58 completed repairs. Of those 58 items, 41 passed a functional test at the end of the session. The other 17 had no recorded final test, so their working condition was not confirmed by the records.
+
+Another 21 items were diagnosed but not repaired, and 17 were not fully assessed. These groups are separate from the 58 completed repairs.
+
+Parts and consumable supplies cost $620. Residents were not charged.
+
+The team did not follow up with visitors after the sessions. Therefore, the records cannot establish whether repaired items continued working at home.
+
+A second pilot has been proposed but has not been approved.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 768
+final_tokens = 768
+llm_seed = 0
+target_words = [
+  300,
+  400,
+]
+required_facts = [
+  { id = "B1", claim = "There were 96 item submissions from 71 distinct visitors." },
+  { id = "B2a", claim = "There were 58 completed repairs." },
+  { id = "B2b", claim = "Only 41 of the completed repairs had a recorded successful final functional test." },
+  { id = "B3a", claim = "Continued operation at home was unknown." },
+  { id = "B3b", claim = "There was no follow-up after the sessions." },
+]
+
+[[tasks]]
+schema_version = 1
+task_id = "repair-LS"
+doc_id = "repair"
+profile = "LS"
+context_class = "long"
+response_class = "short"
+doc = '''
+Pinebridge Repair Pilot: Results
+
+Pinebridge operated a free household-item repair pilot at its public library on 12 Saturdays.
+
+The team recorded 96 item submissions from 71 distinct visitors. Some visitors submitted another item on a later Saturday.
+
+Volunteers recorded 58 completed repairs. Of those 58 items, 41 passed a functional test at the end of the session. The other 17 had no recorded final test, so their working condition was not confirmed by the records.
+
+Another 21 items were diagnosed but not repaired, and 17 were not fully assessed. These groups are separate from the 58 completed repairs.
+
+Parts and consumable supplies cost $620. Residents were not charged.
+
+The team did not follow up with visitors after the sessions. Therefore, the records cannot establish whether repaired items continued working at home.
+
+A second pilot has been proposed but has not been approved.
+
+Operational Background and Supporting Notes
+
+The repair pilot used a meeting room inside the public library. It was open from 10 a.m. to 2 p.m. on each of the 12 Saturdays. The room was arranged into an intake area, inspection tables, and a waiting area. Residents remained present while volunteers worked on their items. The pilot did not operate as a drop-off service in which items could be collected on a later day.
+
+The accepted categories were lamps, fans, toasters, and simple hand tools. The team recorded 34 lamps, 27 fans, 19 toasters, and 16 hand tools, which add to 96 submissions. Large appliances, gas-powered equipment, and items with damaged lithium batteries were outside the pilot's scope. The team did not record the age, brand, original price, or replacement price of submitted items.
+
+Each submission received a separate record. A participant could submit one item per visit and return with another item on a later Saturday. The team used participant identifiers to count 71 distinct visitors across the pilot. The 96 submissions should therefore not be described as 96 different people. Submission counts describe the workload presented to volunteers.
+
+The intake process included recording the item category, asking the visitor to describe the problem, and checking whether the item was within scope. Volunteers could decline further work when a problem exceeded their skills or required unavailable equipment. Being accepted at intake did not guarantee that an item would receive a diagnosis or a completed repair.
+
+The final records divided submissions into three mutually exclusive groups: 58 completed repairs, 21 diagnoses without a completed repair, and 17 items not fully assessed. These counts add to 96. The last group included cases in which the session ended or the visitor left before assessment was complete. The team did not record a detailed reason for every incomplete assessment.
+
+Completed repair was a workflow status entered by a volunteer. A separate field recorded whether a final functional test had been completed successfully. Of the 58 items marked repaired, 41 had a recorded successful test. The remaining 17 had no recorded final test. Missing test records do not prove that those items failed, but they also do not confirm that the items were working.
+
+The 21 diagnosed-but-not-repaired items remained outside the completed-repair count. Some required a replacement part that was unavailable, while others required work outside the pilot's scope. The records did not provide a reliable breakdown between those reasons. A report should therefore avoid assigning specific counts to the two explanations.
+
+There were 11 volunteers across the pilot, with no more than 5 present on any Saturday. They recorded 146 total volunteer hours, including setup and cleanup. Volunteer hours were not assigned to individual submissions. The records therefore do not support calculating an observed repair time for each item or comparing the labor required by item category.
+
+The association spent $620 on replacement parts and consumable supplies. Residents paid no fee. The library did not charge the pilot for the room, and volunteers were unpaid. The $620 figure is a spending category, not a complete valuation of labor, space, tools, and every other resource used. Existing tools included screwdrivers, pliers, multimeters, and safety glasses.
+
+Volunteers disconnected items from power before opening them and used safety glasses when appropriate. Repairs were stopped during two sessions after signs of overheating were observed. No injuries were reported. The pilot did not include a formal electrical-safety inspection by a licensed technician. A functional test should not be presented as a professional safety certification.
+
+An optional feedback form received 43 responses. Thirty-five respondents described the guidance as useful, six were unsure, and two did not find it useful. These responses concerned perceived usefulness of the guidance. They did not establish whether an item worked afterward, whether a replacement purchase was avoided, or how much money a visitor saved.
+
+The association did not contact participants after they left. There were no observations of performance at home or duration of continued use. The records cannot establish long-term reliability, avoided waste, or avoided purchases. Even the 41 successful end-of-session tests only describe the observed condition at that point in time.
+
+The proposed second pilot would allocate $1,000 to parts, provide another volunteer training session, and ask participants two weeks later whether their items still worked. It would also require a final test entry for every completed repair. These changes have not been approved, no start date has been chosen, and the proposed follow-up has not yet produced any data.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write one paragraph of 60–90 English words.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Prioritize these facts over dates, opening hours, and background.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write one paragraph of 60–90 English words.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Prioritize these facts over dates, opening hours, and background.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write one paragraph of 60–90 English words.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Prioritize these facts over dates, opening hours, and background.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 192
+final_tokens = 192
+llm_seed = 0
+target_words = [
+  60,
+  90,
+]
+required_facts = [
+  { id = "B1", claim = "There were 96 item submissions from 71 distinct visitors." },
+  { id = "B2a", claim = "There were 58 completed repairs." },
+  { id = "B2b", claim = "Only 41 of the completed repairs had a recorded successful final functional test." },
+  { id = "B3a", claim = "Continued operation at home was unknown." },
+  { id = "B3b", claim = "There was no follow-up after the sessions." },
+]
+
+[[tasks]]
+schema_version = 1
+task_id = "repair-LL"
+doc_id = "repair"
+profile = "LL"
+context_class = "long"
+response_class = "long"
+doc = '''
+Pinebridge Repair Pilot: Results
+
+Pinebridge operated a free household-item repair pilot at its public library on 12 Saturdays.
+
+The team recorded 96 item submissions from 71 distinct visitors. Some visitors submitted another item on a later Saturday.
+
+Volunteers recorded 58 completed repairs. Of those 58 items, 41 passed a functional test at the end of the session. The other 17 had no recorded final test, so their working condition was not confirmed by the records.
+
+Another 21 items were diagnosed but not repaired, and 17 were not fully assessed. These groups are separate from the 58 completed repairs.
+
+Parts and consumable supplies cost $620. Residents were not charged.
+
+The team did not follow up with visitors after the sessions. Therefore, the records cannot establish whether repaired items continued working at home.
+
+A second pilot has been proposed but has not been approved.
+
+Operational Background and Supporting Notes
+
+The repair pilot used a meeting room inside the public library. It was open from 10 a.m. to 2 p.m. on each of the 12 Saturdays. The room was arranged into an intake area, inspection tables, and a waiting area. Residents remained present while volunteers worked on their items. The pilot did not operate as a drop-off service in which items could be collected on a later day.
+
+The accepted categories were lamps, fans, toasters, and simple hand tools. The team recorded 34 lamps, 27 fans, 19 toasters, and 16 hand tools, which add to 96 submissions. Large appliances, gas-powered equipment, and items with damaged lithium batteries were outside the pilot's scope. The team did not record the age, brand, original price, or replacement price of submitted items.
+
+Each submission received a separate record. A participant could submit one item per visit and return with another item on a later Saturday. The team used participant identifiers to count 71 distinct visitors across the pilot. The 96 submissions should therefore not be described as 96 different people. Submission counts describe the workload presented to volunteers.
+
+The intake process included recording the item category, asking the visitor to describe the problem, and checking whether the item was within scope. Volunteers could decline further work when a problem exceeded their skills or required unavailable equipment. Being accepted at intake did not guarantee that an item would receive a diagnosis or a completed repair.
+
+The final records divided submissions into three mutually exclusive groups: 58 completed repairs, 21 diagnoses without a completed repair, and 17 items not fully assessed. These counts add to 96. The last group included cases in which the session ended or the visitor left before assessment was complete. The team did not record a detailed reason for every incomplete assessment.
+
+Completed repair was a workflow status entered by a volunteer. A separate field recorded whether a final functional test had been completed successfully. Of the 58 items marked repaired, 41 had a recorded successful test. The remaining 17 had no recorded final test. Missing test records do not prove that those items failed, but they also do not confirm that the items were working.
+
+The 21 diagnosed-but-not-repaired items remained outside the completed-repair count. Some required a replacement part that was unavailable, while others required work outside the pilot's scope. The records did not provide a reliable breakdown between those reasons. A report should therefore avoid assigning specific counts to the two explanations.
+
+There were 11 volunteers across the pilot, with no more than 5 present on any Saturday. They recorded 146 total volunteer hours, including setup and cleanup. Volunteer hours were not assigned to individual submissions. The records therefore do not support calculating an observed repair time for each item or comparing the labor required by item category.
+
+The association spent $620 on replacement parts and consumable supplies. Residents paid no fee. The library did not charge the pilot for the room, and volunteers were unpaid. The $620 figure is a spending category, not a complete valuation of labor, space, tools, and every other resource used. Existing tools included screwdrivers, pliers, multimeters, and safety glasses.
+
+Volunteers disconnected items from power before opening them and used safety glasses when appropriate. Repairs were stopped during two sessions after signs of overheating were observed. No injuries were reported. The pilot did not include a formal electrical-safety inspection by a licensed technician. A functional test should not be presented as a professional safety certification.
+
+An optional feedback form received 43 responses. Thirty-five respondents described the guidance as useful, six were unsure, and two did not find it useful. These responses concerned perceived usefulness of the guidance. They did not establish whether an item worked afterward, whether a replacement purchase was avoided, or how much money a visitor saved.
+
+The association did not contact participants after they left. There were no observations of performance at home or duration of continued use. The records cannot establish long-term reliability, avoided waste, or avoided purchases. Even the 41 successful end-of-session tests only describe the observed condition at that point in time.
+
+The proposed second pilot would allocate $1,000 to parts, provide another volunteer training session, and ask participants two weeks later whether their items still worked. It would also require a final test entry for every completed repair. These changes have not been approved, no start date has been chosen, and the proposed follow-up has not yet produced any data.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 768
+final_tokens = 768
+llm_seed = 0
+target_words = [
+  300,
+  400,
+]
+required_facts = [
+  { id = "B1", claim = "There were 96 item submissions from 71 distinct visitors." },
+  { id = "B2a", claim = "There were 58 completed repairs." },
+  { id = "B2b", claim = "Only 41 of the completed repairs had a recorded successful final functional test." },
+  { id = "B3a", claim = "Continued operation at home was unknown." },
+  { id = "B3b", claim = "There was no follow-up after the sessions." },
+]

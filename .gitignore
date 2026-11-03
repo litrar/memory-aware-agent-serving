@@ -1,0 +1,15 @@
+.vscode/
+results/
+results*
+.env
+.python-version
+models/
+third_party/llama.cpp/
+__pycache__/
+.DS_Store
+model/
+agent_old.py
+.terraform/
+*.terraform*
+*.tfstate*
+*.tfvars

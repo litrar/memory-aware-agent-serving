@@ -1,0 +1,1614 @@
+# Controlled synthetic variants of two factual scenarios; not independent factual sources.
+# Four distinct initial document headers and supporting sections; no repeated paragraphs within a document.
+
+[[tasks]]
+schema_version = 1
+task_id = "harborview-LL-t1600"
+doc_id = "harborview"
+profile = "LL"
+context_class = "long"
+response_class = "long"
+doc = '''
+Harborview Cooling Center: Pilot Results
+
+Harborview operated a cooling center at the Community Hall for six weeks. It opened on 30 weekdays, from 1 p.m. to 7 p.m.
+
+Staff recorded 312 visits. A person could visit more than once, and the attendance system did not identify unique visitors.
+
+The recorded pilot expenditure was $4,800. This covered temporary staff, cooling equipment and electricity, supplies, and outreach. The city provided the hall without charging the pilot.
+
+An optional exit survey received 68 responses. Of these, 54 said they would return during a future heat event, 9 were unsure, and 5 would not return. These responses describe survey participants; they do not establish the opinions of all visitors.
+
+The pilot did not collect health-outcome data or include a comparison neighborhood. Therefore, the available evidence cannot establish whether the center reduced heat-related illness.
+
+The office has proposed another pilot, but it has not been approved.
+
+Operational Background and Supporting Notes
+
+The Community Hall was selected because it already had an accessible entrance, public restrooms, tables, chairs, and a room that could be separated from other activities. Selecting an existing building allowed the office to begin the pilot without construction work. The office did not compare the hall with alternative locations. Convenient access was a reason for choosing the site, but travel times were not measured.
+
+The center was intended to provide a place to rest during hot afternoons. Staff offered drinking water and printed heat-safety information. They did not provide medical treatment, individual medical assessments, transportation, or overnight accommodation. Visitors who needed services outside this scope were directed to existing city information channels. The pilot did not record what happened after such referrals.
+
+Opening procedures began before public access. Staff checked the entrance, arranged chairs, inspected water supplies, and confirmed that the room was ready. Closing procedures included collecting unused materials, checking the room, and completing the daily log. The published opening hours described access for visitors; they were not a measurement of total staff working time.
+
+Two temporary staff members were scheduled on each open day. Their duties included welcoming visitors, recording visits, answering basic questions, and keeping supplies available. Permanent public-health employees planned and supervised the pilot. Their salaries were outside the recorded $4,800 expenditure. Consequently, that figure should not be described as a complete economic valuation of every resource used.
+
+The expenditure ledger contained four categories: $2,700 for temporary staff, $1,350 for cooling equipment and electricity, $450 for water and paper supplies, and $300 for printing and outreach. These categories add to the recorded total. The ledger did not assign a monetary value to use of the city-owned hall. A future pilot at a different venue might therefore have a different cost structure even if attendance were similar.
+
+Staff recorded 186 visits between 1 p.m. and 4 p.m. and 126 visits between 4 p.m. and 7 p.m. These counts add to 312. They indicate when visits were recorded, not how long visitors stayed. A visitor arriving before 4 p.m. could remain afterward. The records cannot be used to calculate the number of people simultaneously present or the average duration of a visit.
+
+The daily log showed a maximum of 24 visits on one open day and a minimum of 2 on another. Dividing 312 visits by 30 open days gives 10.4 visits per open day. This average does not describe a typical person's behavior. It also does not show whether attendance changed because of temperature, publicity, transport availability, or other factors; those relationships were not analyzed.
+
+The center distributed 207 printed information cards and served 438 cups of water. Staff did not track which visitors received cards, whether they read them, or whether they changed their behavior. Visitors could take multiple cups of water. Neither the card count nor the cup count provides an independent estimate of unique attendance.
+
+Outreach consisted of library posters, neighborhood email notices, and information at two bus stops. The office did not purchase advertisements. Visitors were not systematically asked how they heard about the center. The records therefore cannot identify which outreach method produced the most visits or whether any part of the neighborhood was poorly reached.
+
+The exit survey was optional and was offered when staff were available. It was not randomly assigned, and the office did not link survey responses to attendance records. The team cannot calculate a response rate among unique visitors. The 54 positive responses show that some respondents expected to return, but intended future use is different from observed future attendance.
+
+No individual health information was collected. Staff did not measure changes in symptoms, emergency visits, or hospital admissions. There was also no comparison neighborhood. Attendance and survey results can support an operational description of the pilot, but they cannot establish a causal effect on heat-related illness.
+
+For another pilot, the office proposed recording anonymous visit duration estimates and asking how visitors heard about the center. It also proposed reviewing whether opening later on very hot days would be practical. These are planning suggestions. The office has not approved a new schedule, committed additional funding, or established that longer hours would improve health outcomes.
+
+Facility preparation and daily operations
+
+The room layout was documented before opening so that a substitute worker could prepare the space without relying on the usual team. Chairs faced inward rather than toward the registration desk, giving visitors a place to rest without appearing to queue for an interview. A clear route connected the entrance, seating, drinking-water table, and restroom corridor. Furniture from unrelated hall activities remained outside this route. The layout drawing was an operational reference, not a survey of how visitors actually moved through the building.
+
+A nearby bus stop and the library were included on the printed location map. The map identified the public entrance rather than a service door normally used for deliveries. Staff checked that the sign could be read from the sidewalk and that arrows did not direct people through a locked courtyard. They could explain the route to someone who telephoned, but they did not record callers' addresses or travel arrangements. Consequently, the map describes intended access and cannot be used to reconstruct the geographic distribution of attendance.
+
+The opening checklist assigned tasks to positions rather than to named employees. The opening worker checked public access and water supplies while the second worker prepared the visit sheet and information table. If the assigned person was absent, the replacement could identify unfinished tasks from the checklist. Workers initialed completed items and noted exceptions in a separate column. The checklist did not collect visitor information, and a completed checklist was not counted as evidence that anyone had attended the center.
+
+A notice near the entrance explained that the room was available for resting during the published hours. It listed the available facilities and told visitors that staff could not provide clinical advice. The same notice explained that attendance would be counted without collecting names. Staff were instructed to answer questions about the notice before directing a visitor to a chair. Reading the notice was voluntary; visitors were not required to sign an agreement or demonstrate that they understood the printed heat-safety material.
+
+Staffing coverage included a handover whenever a worker took a break. The departing worker identified any missing supplies, unresolved facility issue, or request for information that still needed attention. Personal details were not included in the general handover note. This arrangement maintained continuity at the entrance and water table while using the scheduled staffing complement. The notes describe work that staff considered unfinished; they do not measure service quality or establish whether every visitor received the same amount of assistance.
+
+Reporting scope
+
+The completed cooling-center pilot provides an account of recorded visits, spending, and survey responses. The operational detail explains how the service and its records were organized. It does not identify unique attendance or establish a reduction in heat-related illness. Further activity remains a proposal requiring approval and an evaluation design appropriate to any future outcome claim.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 768
+final_tokens = 768
+llm_seed = 0
+target_words = [
+  300,
+  400,
+]
+required_facts = [
+  { id = "A1a", claim = "The pilot recorded 312 visits." },
+  { id = "A1b", claim = "Repeat visits were possible; the unique visitor count was unknown." },
+  { id = "A2", claim = "Recorded pilot expenditure was $4,800." },
+  { id = "A3a", claim = "The pilot did not establish a reduction in heat-related illness." },
+  { id = "A3b", claim = "Health-outcome data and a comparison neighborhood were absent." },
+]
+doc_target_tokens = 1600
+measured_doc_tokens = 1610
+
+[[tasks]]
+schema_version = 1
+task_id = "pinebridge-LL-t1600"
+doc_id = "pinebridge"
+profile = "LL"
+context_class = "long"
+response_class = "long"
+doc = '''
+Pinebridge Repair Pilot: Results
+
+Pinebridge operated a free household-item repair pilot at its public library on 12 Saturdays.
+
+The team recorded 96 item submissions from 71 distinct visitors. Some visitors submitted another item on a later Saturday.
+
+Volunteers recorded 58 completed repairs. Of those 58 items, 41 passed a functional test at the end of the session. The other 17 had no recorded final test, so their working condition was not confirmed by the records.
+
+Another 21 items were diagnosed but not repaired, and 17 were not fully assessed. These groups are separate from the 58 completed repairs.
+
+Parts and consumable supplies cost $620. Residents were not charged.
+
+The team did not follow up with visitors after the sessions. Therefore, the records cannot establish whether repaired items continued working at home.
+
+A second pilot has been proposed but has not been approved.
+
+Operational Background and Supporting Notes
+
+The repair pilot used a meeting room inside the public library. It was open from 10 a.m. to 2 p.m. on each of the 12 Saturdays. The room was arranged into an intake area, inspection tables, and a waiting area. Residents remained present while volunteers worked on their items. The pilot did not operate as a drop-off service in which items could be collected on a later day.
+
+The accepted categories were lamps, fans, toasters, and simple hand tools. The team recorded 34 lamps, 27 fans, 19 toasters, and 16 hand tools, which add to 96 submissions. Large appliances, gas-powered equipment, and items with damaged lithium batteries were outside the pilot's scope. The team did not record the age, brand, original price, or replacement price of submitted items.
+
+Each submission received a separate record. A participant could submit one item per visit and return with another item on a later Saturday. The team used participant identifiers to count 71 distinct visitors across the pilot. The 96 submissions should therefore not be described as 96 different people. Submission counts describe the workload presented to volunteers.
+
+The intake process included recording the item category, asking the visitor to describe the problem, and checking whether the item was within scope. Volunteers could decline further work when a problem exceeded their skills or required unavailable equipment. Being accepted at intake did not guarantee that an item would receive a diagnosis or a completed repair.
+
+The final records divided submissions into three mutually exclusive groups: 58 completed repairs, 21 diagnoses without a completed repair, and 17 items not fully assessed. These counts add to 96. The last group included cases in which the session ended or the visitor left before assessment was complete. The team did not record a detailed reason for every incomplete assessment.
+
+Completed repair was a workflow status entered by a volunteer. A separate field recorded whether a final functional test had been completed successfully. Of the 58 items marked repaired, 41 had a recorded successful test. The remaining 17 had no recorded final test. Missing test records do not prove that those items failed, but they also do not confirm that the items were working.
+
+The 21 diagnosed-but-not-repaired items remained outside the completed-repair count. Some required a replacement part that was unavailable, while others required work outside the pilot's scope. The records did not provide a reliable breakdown between those reasons. A report should therefore avoid assigning specific counts to the two explanations.
+
+There were 11 volunteers across the pilot, with no more than 5 present on any Saturday. They recorded 146 total volunteer hours, including setup and cleanup. Volunteer hours were not assigned to individual submissions. The records therefore do not support calculating an observed repair time for each item or comparing the labor required by item category.
+
+The association spent $620 on replacement parts and consumable supplies. Residents paid no fee. The library did not charge the pilot for the room, and volunteers were unpaid. The $620 figure is a spending category, not a complete valuation of labor, space, tools, and every other resource used. Existing tools included screwdrivers, pliers, multimeters, and safety glasses.
+
+Volunteers disconnected items from power before opening them and used safety glasses when appropriate. Repairs were stopped during two sessions after signs of overheating were observed. No injuries were reported. The pilot did not include a formal electrical-safety inspection by a licensed technician. A functional test should not be presented as a professional safety certification.
+
+An optional feedback form received 43 responses. Thirty-five respondents described the guidance as useful, six were unsure, and two did not find it useful. These responses concerned perceived usefulness of the guidance. They did not establish whether an item worked afterward, whether a replacement purchase was avoided, or how much money a visitor saved.
+
+The association did not contact participants after they left. There were no observations of performance at home or duration of continued use. The records cannot establish long-term reliability, avoided waste, or avoided purchases. Even the 41 successful end-of-session tests only describe the observed condition at that point in time.
+
+The proposed second pilot would allocate $1,000 to parts, provide another volunteer training session, and ask participants two weeks later whether their items still worked. It would also require a final test entry for every completed repair. These changes have not been approved, no start date has been chosen, and the proposed follow-up has not yet produced any data.
+
+Workshop preparation and work areas
+
+The library meeting room was prepared before public entry so that intake and repair work used different parts of the space. An arriving resident could describe an item at the entrance without walking through tables where tools were in use. Chairs for waiting residents were placed where volunteers could call someone forward without leaving an open item unattended. This arrangement was intended to support the session's workflow. The team did not observe movement systematically, so the layout cannot be used to calculate an average waiting time or measure visitor congestion.
+
+The equipment list distinguished association-owned tools from tools brought by individual volunteers. Labels identified which storage case an item belonged in, and the closing checklist asked volunteers to return tools to the appropriate case. A missing screwdriver or meter lead could then be addressed as a tool-control issue rather than recorded as an expense for a replacement part used in a resident's item. The equipment list described resources available for the workshop; it did not assign a market value to the full collection.
+
+The intake table displayed the accepted item categories and the principal exclusions. Staff used the notice to explain why a large appliance or an item with a damaged lithium battery could not be handled in the room. A conversation about an excluded item did not create a submission record unless the item was accepted into the pilot's documented workflow. The report's category totals therefore describe recorded submissions, and the team did not use informal questions at the door to estimate unmet demand outside the program's scope.
+
+For an accepted item, a volunteer asked the resident to describe the problem in ordinary language before deciding which inspection steps were appropriate. A statement such as an intermittent failure was entered as the resident's description, not as a confirmed diagnosis. The record separated that initial description from the volunteer's later assessment. This distinction allowed a reviewer to see why work began without assuming that every reported symptom had been independently reproduced during the limited time available at the session.
+
+Reporting scope
+
+The repair pilot documents submissions, distinct visitors, completed repair work, and the subset with successful recorded final tests. Supporting operational information explains how those measures were produced. It does not establish that every repaired item worked or continued operating at home. The proposed later pilot remains unapproved, and its planned record changes and follow-up are not results of the completed sessions.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 768
+final_tokens = 768
+llm_seed = 0
+target_words = [
+  300,
+  400,
+]
+required_facts = [
+  { id = "B1", claim = "There were 96 item submissions from 71 distinct visitors." },
+  { id = "B2a", claim = "There were 58 completed repairs." },
+  { id = "B2b", claim = "Only 41 of the completed repairs had a recorded successful final functional test." },
+  { id = "B3a", claim = "Continued operation at home was unknown." },
+  { id = "B3b", claim = "There was no follow-up after the sessions." },
+]
+doc_target_tokens = 1600
+measured_doc_tokens = 1581
+
+[[tasks]]
+schema_version = 1
+task_id = "westhaven-LL-t1600"
+doc_id = "westhaven"
+profile = "LL"
+context_class = "long"
+response_class = "long"
+doc = '''
+Westhaven Cooling Center: Pilot Results
+
+Westhaven operated a cooling center at the Community Hall for six weeks. It opened on 30 weekdays, from 1 p.m. to 7 p.m.
+
+Staff recorded 312 visits. A person could visit more than once, and the attendance system did not identify unique visitors.
+
+The recorded pilot expenditure was $4,800. This covered temporary staff, cooling equipment and electricity, supplies, and outreach. The city provided the hall without charging the pilot.
+
+An optional exit survey received 68 responses. Of these, 54 said they would return during a future heat event, 9 were unsure, and 5 would not return. These responses describe survey participants; they do not establish the opinions of all visitors.
+
+The pilot did not collect health-outcome data or include a comparison neighborhood. Therefore, the available evidence cannot establish whether the center reduced heat-related illness.
+
+The office has proposed another pilot, but it has not been approved.
+
+The expenditure ledger contained four categories: $2,700 for temporary staff, $1,350 for cooling equipment and electricity, $450 for water and paper supplies, and $300 for printing and outreach. These categories add to the recorded total. The ledger did not assign a monetary value to use of the city-owned hall. A future pilot at a different venue might therefore have a different cost structure even if attendance were similar.
+
+Staff recorded 186 visits between 1 p.m. and 4 p.m. and 126 visits between 4 p.m. and 7 p.m. These counts add to 312. They indicate when visits were recorded, not how long visitors stayed. A visitor arriving before 4 p.m. could remain afterward. The records cannot be used to calculate the number of people simultaneously present or the average duration of a visit.
+
+The daily log showed a maximum of 24 visits on one open day and a minimum of 2 on another. Dividing 312 visits by 30 open days gives 10.4 visits per open day. This average does not describe a typical person's behavior. It also does not show whether attendance changed because of temperature, publicity, transport availability, or other factors; those relationships were not analyzed.
+
+The center distributed 207 printed information cards and served 438 cups of water. Staff did not track which visitors received cards, whether they read them, or whether they changed their behavior. Visitors could take multiple cups of water. Neither the card count nor the cup count provides an independent estimate of unique attendance.
+
+Outreach consisted of library posters, neighborhood email notices, and information at two bus stops. The office did not purchase advertisements. Visitors were not systematically asked how they heard about the center. The records therefore cannot identify which outreach method produced the most visits or whether any part of the neighborhood was poorly reached.
+
+The exit survey was optional and was offered when staff were available. It was not randomly assigned, and the office did not link survey responses to attendance records. The team cannot calculate a response rate among unique visitors. The 54 positive responses show that some respondents expected to return, but intended future use is different from observed future attendance.
+
+No individual health information was collected. Staff did not measure changes in symptoms, emergency visits, or hospital admissions. There was also no comparison neighborhood. Attendance and survey results can support an operational description of the pilot, but they cannot establish a causal effect on heat-related illness.
+
+For another pilot, the office proposed recording anonymous visit duration estimates and asking how visitors heard about the center. It also proposed reviewing whether opening later on very hot days would be practical. These are planning suggestions. The office has not approved a new schedule, committed additional funding, or established that longer hours would improve health outcomes.
+
+Facility preparation and daily operations
+
+The room layout was documented before opening so that a substitute worker could prepare the space without relying on the usual team. Chairs faced inward rather than toward the registration desk, giving visitors a place to rest without appearing to queue for an interview. A clear route connected the entrance, seating, drinking-water table, and restroom corridor. Furniture from unrelated hall activities remained outside this route. The layout drawing was an operational reference, not a survey of how visitors actually moved through the building.
+
+A nearby bus stop and the library were included on the printed location map. The map identified the public entrance rather than a service door normally used for deliveries. Staff checked that the sign could be read from the sidewalk and that arrows did not direct people through a locked courtyard. They could explain the route to someone who telephoned, but they did not record callers' addresses or travel arrangements. Consequently, the map describes intended access and cannot be used to reconstruct the geographic distribution of attendance.
+
+The opening checklist assigned tasks to positions rather than to named employees. The opening worker checked public access and water supplies while the second worker prepared the visit sheet and information table. If the assigned person was absent, the replacement could identify unfinished tasks from the checklist. Workers initialed completed items and noted exceptions in a separate column. The checklist did not collect visitor information, and a completed checklist was not counted as evidence that anyone had attended the center.
+
+A notice near the entrance explained that the room was available for resting during the published hours. It listed the available facilities and told visitors that staff could not provide clinical advice. The same notice explained that attendance would be counted without collecting names. Staff were instructed to answer questions about the notice before directing a visitor to a chair. Reading the notice was voluntary; visitors were not required to sign an agreement or demonstrate that they understood the printed heat-safety material.
+
+Staffing coverage included a handover whenever a worker took a break. The departing worker identified any missing supplies, unresolved facility issue, or request for information that still needed attention. Personal details were not included in the general handover note. This arrangement maintained continuity at the entrance and water table while using the scheduled staffing complement. The notes describe work that staff considered unfinished; they do not measure service quality or establish whether every visitor received the same amount of assistance.
+
+Information cards were kept beside the water table and in a holder near the exit. Staff offered a card when an appropriate opportunity arose but did not require visitors to take one. Additional copies could be collected for family members. This explains why distribution was logged as a material count rather than a count of recipients. The office retained the approved card artwork so that later print orders could reproduce the same contact details and avoid inadvertently replacing them with an outdated telephone number.
+
+Water supplies were checked at opening and during routine room checks. Replacement cups were stored separately from cleaning products, and the storage shelf carried a label indicating which stock belonged to the pilot. Staff noted shortages and damaged packaging so that the next shift could replenish supplies. The stock process distinguished material brought into the hall from material actually used. A delivery did not count as visitor consumption, and an opened package was not treated as proof that every cup in it had been served.
+
+Equipment cables were routed along the edge of the room where possible. Workers checked for obvious damage before use and kept movable furniture away from electrical connections. They were expected to stop using equipment if they noticed an unusual smell, damaged plug, or other apparent fault, and then contact the building supervisor. Their role was limited to a basic operational check. The pilot did not commission a separate engineering evaluation, so these procedures do not establish equipment efficiency or certify the condition of the building's electrical installation.
+
+Reporting scope
+
+The completed cooling-center pilot provides an account of recorded visits, spending, and survey responses. The operational detail explains how the service and its records were organized. It does not identify unique attendance or establish a reduction in heat-related illness. Further activity remains a proposal requiring approval and an evaluation design appropriate to any future outcome claim.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 768
+final_tokens = 768
+llm_seed = 0
+target_words = [
+  300,
+  400,
+]
+required_facts = [
+  { id = "A1a", claim = "The pilot recorded 312 visits." },
+  { id = "A1b", claim = "Repeat visits were possible; the unique visitor count was unknown." },
+  { id = "A2", claim = "Recorded pilot expenditure was $4,800." },
+  { id = "A3a", claim = "The pilot did not establish a reduction in heat-related illness." },
+  { id = "A3b", claim = "Health-outcome data and a comparison neighborhood were absent." },
+]
+doc_target_tokens = 1600
+measured_doc_tokens = 1599
+
+[[tasks]]
+schema_version = 1
+task_id = "oakmere-LL-t1600"
+doc_id = "oakmere"
+profile = "LL"
+context_class = "long"
+response_class = "long"
+doc = '''
+Oakmere Repair Pilot: Results
+
+Oakmere operated a free household-item repair pilot at its public library on 12 Saturdays.
+
+The team recorded 96 item submissions from 71 distinct visitors. Some visitors submitted another item on a later Saturday.
+
+Volunteers recorded 58 completed repairs. Of those 58 items, 41 passed a functional test at the end of the session. The other 17 had no recorded final test, so their working condition was not confirmed by the records.
+
+Another 21 items were diagnosed but not repaired, and 17 were not fully assessed. These groups are separate from the 58 completed repairs.
+
+Parts and consumable supplies cost $620. Residents were not charged.
+
+The team did not follow up with visitors after the sessions. Therefore, the records cannot establish whether repaired items continued working at home.
+
+A second pilot has been proposed but has not been approved.
+
+The final records divided submissions into three mutually exclusive groups: 58 completed repairs, 21 diagnoses without a completed repair, and 17 items not fully assessed. These counts add to 96. The last group included cases in which the session ended or the visitor left before assessment was complete. The team did not record a detailed reason for every incomplete assessment.
+
+Completed repair was a workflow status entered by a volunteer. A separate field recorded whether a final functional test had been completed successfully. Of the 58 items marked repaired, 41 had a recorded successful test. The remaining 17 had no recorded final test. Missing test records do not prove that those items failed, but they also do not confirm that the items were working.
+
+The 21 diagnosed-but-not-repaired items remained outside the completed-repair count. Some required a replacement part that was unavailable, while others required work outside the pilot's scope. The records did not provide a reliable breakdown between those reasons. A report should therefore avoid assigning specific counts to the two explanations.
+
+There were 11 volunteers across the pilot, with no more than 5 present on any Saturday. They recorded 146 total volunteer hours, including setup and cleanup. Volunteer hours were not assigned to individual submissions. The records therefore do not support calculating an observed repair time for each item or comparing the labor required by item category.
+
+The association spent $620 on replacement parts and consumable supplies. Residents paid no fee. The library did not charge the pilot for the room, and volunteers were unpaid. The $620 figure is a spending category, not a complete valuation of labor, space, tools, and every other resource used. Existing tools included screwdrivers, pliers, multimeters, and safety glasses.
+
+Volunteers disconnected items from power before opening them and used safety glasses when appropriate. Repairs were stopped during two sessions after signs of overheating were observed. No injuries were reported. The pilot did not include a formal electrical-safety inspection by a licensed technician. A functional test should not be presented as a professional safety certification.
+
+An optional feedback form received 43 responses. Thirty-five respondents described the guidance as useful, six were unsure, and two did not find it useful. These responses concerned perceived usefulness of the guidance. They did not establish whether an item worked afterward, whether a replacement purchase was avoided, or how much money a visitor saved.
+
+The association did not contact participants after they left. There were no observations of performance at home or duration of continued use. The records cannot establish long-term reliability, avoided waste, or avoided purchases. Even the 41 successful end-of-session tests only describe the observed condition at that point in time.
+
+The proposed second pilot would allocate $1,000 to parts, provide another volunteer training session, and ask participants two weeks later whether their items still worked. It would also require a final test entry for every completed repair. These changes have not been approved, no start date has been chosen, and the proposed follow-up has not yet produced any data.
+
+Workshop preparation and work areas
+
+The library meeting room was prepared before public entry so that intake and repair work used different parts of the space. An arriving resident could describe an item at the entrance without walking through tables where tools were in use. Chairs for waiting residents were placed where volunteers could call someone forward without leaving an open item unattended. This arrangement was intended to support the session's workflow. The team did not observe movement systematically, so the layout cannot be used to calculate an average waiting time or measure visitor congestion.
+
+The equipment list distinguished association-owned tools from tools brought by individual volunteers. Labels identified which storage case an item belonged in, and the closing checklist asked volunteers to return tools to the appropriate case. A missing screwdriver or meter lead could then be addressed as a tool-control issue rather than recorded as an expense for a replacement part used in a resident's item. The equipment list described resources available for the workshop; it did not assign a market value to the full collection.
+
+The intake table displayed the accepted item categories and the principal exclusions. Staff used the notice to explain why a large appliance or an item with a damaged lithium battery could not be handled in the room. A conversation about an excluded item did not create a submission record unless the item was accepted into the pilot's documented workflow. The report's category totals therefore describe recorded submissions, and the team did not use informal questions at the door to estimate unmet demand outside the program's scope.
+
+For an accepted item, a volunteer asked the resident to describe the problem in ordinary language before deciding which inspection steps were appropriate. A statement such as an intermittent failure was entered as the resident's description, not as a confirmed diagnosis. The record separated that initial description from the volunteer's later assessment. This distinction allowed a reviewer to see why work began without assuming that every reported symptom had been independently reproduced during the limited time available at the session.
+
+Volunteers discussed how to allocate work according to familiarity with an item and the tools available. Someone comfortable inspecting a lamp might still need assistance with an unfamiliar switching mechanism. A second volunteer could examine the issue before work continued, and the team could stop when its skills were insufficient. That informal consultation was part of the workshop process. The project did not introduce a standardized skills examination or a rating that would support comparing the abilities of individual volunteers in the final report.
+
+Parts were stored in labeled containers so that small components could be identified without searching several worktables. A volunteer who used an available part noted the relevant information on the item record when practical. Unused stock remained association property for later sessions. A container holding spare components did not establish that every component had been purchased during this pilot or installed in a submitted item. The expenditure summary was based on purchases in the accounting records rather than an estimated value of everything visible in the room.
+
+Cleaning materials were stored away from open items and electrical equipment. At closing, volunteers checked the work surfaces for loose screws and other small parts that could belong to a resident's item. They asked residents to keep removable accessories with the associated submission whenever possible. These housekeeping measures supported orderly work and return of items. The team did not undertake a separate loss audit, so a description of its cleaning procedure should not be presented as a measured rate of component retention or proof that no accessory was ever misplaced.
+
+The public session had a fixed closing time. Volunteers were encouraged to explain the remaining work before beginning a procedure that could not reasonably be completed within that period. When an assessment remained unfinished, the record was expected to reflect the actual status at closing rather than the status the volunteer hoped to achieve later. Residents left with their items. The workshop did not create a continuing repair obligation or keep unfinished items in storage for volunteers to work on between Saturdays.
+
+Reporting scope
+
+The repair pilot documents submissions, distinct visitors, completed repair work, and the subset with successful recorded final tests. Supporting operational information explains how those measures were produced. It does not establish that every repaired item worked or continued operating at home. The proposed later pilot remains unapproved, and its planned record changes and follow-up are not results of the completed sessions.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 768
+final_tokens = 768
+llm_seed = 0
+target_words = [
+  300,
+  400,
+]
+required_facts = [
+  { id = "B1", claim = "There were 96 item submissions from 71 distinct visitors." },
+  { id = "B2a", claim = "There were 58 completed repairs." },
+  { id = "B2b", claim = "Only 41 of the completed repairs had a recorded successful final functional test." },
+  { id = "B3a", claim = "Continued operation at home was unknown." },
+  { id = "B3b", claim = "There was no follow-up after the sessions." },
+]
+doc_target_tokens = 1600
+measured_doc_tokens = 1641
+
+[[tasks]]
+schema_version = 1
+task_id = "harborview-LL-t1800"
+doc_id = "harborview"
+profile = "LL"
+context_class = "long"
+response_class = "long"
+doc = '''
+Harborview Cooling Center: Pilot Results
+
+Harborview operated a cooling center at the Community Hall for six weeks. It opened on 30 weekdays, from 1 p.m. to 7 p.m.
+
+Staff recorded 312 visits. A person could visit more than once, and the attendance system did not identify unique visitors.
+
+The recorded pilot expenditure was $4,800. This covered temporary staff, cooling equipment and electricity, supplies, and outreach. The city provided the hall without charging the pilot.
+
+An optional exit survey received 68 responses. Of these, 54 said they would return during a future heat event, 9 were unsure, and 5 would not return. These responses describe survey participants; they do not establish the opinions of all visitors.
+
+The pilot did not collect health-outcome data or include a comparison neighborhood. Therefore, the available evidence cannot establish whether the center reduced heat-related illness.
+
+The office has proposed another pilot, but it has not been approved.
+
+Operational Background and Supporting Notes
+
+The Community Hall was selected because it already had an accessible entrance, public restrooms, tables, chairs, and a room that could be separated from other activities. Selecting an existing building allowed the office to begin the pilot without construction work. The office did not compare the hall with alternative locations. Convenient access was a reason for choosing the site, but travel times were not measured.
+
+The center was intended to provide a place to rest during hot afternoons. Staff offered drinking water and printed heat-safety information. They did not provide medical treatment, individual medical assessments, transportation, or overnight accommodation. Visitors who needed services outside this scope were directed to existing city information channels. The pilot did not record what happened after such referrals.
+
+Opening procedures began before public access. Staff checked the entrance, arranged chairs, inspected water supplies, and confirmed that the room was ready. Closing procedures included collecting unused materials, checking the room, and completing the daily log. The published opening hours described access for visitors; they were not a measurement of total staff working time.
+
+Two temporary staff members were scheduled on each open day. Their duties included welcoming visitors, recording visits, answering basic questions, and keeping supplies available. Permanent public-health employees planned and supervised the pilot. Their salaries were outside the recorded $4,800 expenditure. Consequently, that figure should not be described as a complete economic valuation of every resource used.
+
+The expenditure ledger contained four categories: $2,700 for temporary staff, $1,350 for cooling equipment and electricity, $450 for water and paper supplies, and $300 for printing and outreach. These categories add to the recorded total. The ledger did not assign a monetary value to use of the city-owned hall. A future pilot at a different venue might therefore have a different cost structure even if attendance were similar.
+
+Staff recorded 186 visits between 1 p.m. and 4 p.m. and 126 visits between 4 p.m. and 7 p.m. These counts add to 312. They indicate when visits were recorded, not how long visitors stayed. A visitor arriving before 4 p.m. could remain afterward. The records cannot be used to calculate the number of people simultaneously present or the average duration of a visit.
+
+The daily log showed a maximum of 24 visits on one open day and a minimum of 2 on another. Dividing 312 visits by 30 open days gives 10.4 visits per open day. This average does not describe a typical person's behavior. It also does not show whether attendance changed because of temperature, publicity, transport availability, or other factors; those relationships were not analyzed.
+
+The center distributed 207 printed information cards and served 438 cups of water. Staff did not track which visitors received cards, whether they read them, or whether they changed their behavior. Visitors could take multiple cups of water. Neither the card count nor the cup count provides an independent estimate of unique attendance.
+
+Outreach consisted of library posters, neighborhood email notices, and information at two bus stops. The office did not purchase advertisements. Visitors were not systematically asked how they heard about the center. The records therefore cannot identify which outreach method produced the most visits or whether any part of the neighborhood was poorly reached.
+
+The exit survey was optional and was offered when staff were available. It was not randomly assigned, and the office did not link survey responses to attendance records. The team cannot calculate a response rate among unique visitors. The 54 positive responses show that some respondents expected to return, but intended future use is different from observed future attendance.
+
+No individual health information was collected. Staff did not measure changes in symptoms, emergency visits, or hospital admissions. There was also no comparison neighborhood. Attendance and survey results can support an operational description of the pilot, but they cannot establish a causal effect on heat-related illness.
+
+For another pilot, the office proposed recording anonymous visit duration estimates and asking how visitors heard about the center. It also proposed reviewing whether opening later on very hot days would be practical. These are planning suggestions. The office has not approved a new schedule, committed additional funding, or established that longer hours would improve health outcomes.
+
+Facility preparation and daily operations
+
+The room layout was documented before opening so that a substitute worker could prepare the space without relying on the usual team. Chairs faced inward rather than toward the registration desk, giving visitors a place to rest without appearing to queue for an interview. A clear route connected the entrance, seating, drinking-water table, and restroom corridor. Furniture from unrelated hall activities remained outside this route. The layout drawing was an operational reference, not a survey of how visitors actually moved through the building.
+
+A nearby bus stop and the library were included on the printed location map. The map identified the public entrance rather than a service door normally used for deliveries. Staff checked that the sign could be read from the sidewalk and that arrows did not direct people through a locked courtyard. They could explain the route to someone who telephoned, but they did not record callers' addresses or travel arrangements. Consequently, the map describes intended access and cannot be used to reconstruct the geographic distribution of attendance.
+
+The opening checklist assigned tasks to positions rather than to named employees. The opening worker checked public access and water supplies while the second worker prepared the visit sheet and information table. If the assigned person was absent, the replacement could identify unfinished tasks from the checklist. Workers initialed completed items and noted exceptions in a separate column. The checklist did not collect visitor information, and a completed checklist was not counted as evidence that anyone had attended the center.
+
+A notice near the entrance explained that the room was available for resting during the published hours. It listed the available facilities and told visitors that staff could not provide clinical advice. The same notice explained that attendance would be counted without collecting names. Staff were instructed to answer questions about the notice before directing a visitor to a chair. Reading the notice was voluntary; visitors were not required to sign an agreement or demonstrate that they understood the printed heat-safety material.
+
+Staffing coverage included a handover whenever a worker took a break. The departing worker identified any missing supplies, unresolved facility issue, or request for information that still needed attention. Personal details were not included in the general handover note. This arrangement maintained continuity at the entrance and water table while using the scheduled staffing complement. The notes describe work that staff considered unfinished; they do not measure service quality or establish whether every visitor received the same amount of assistance.
+
+Information cards were kept beside the water table and in a holder near the exit. Staff offered a card when an appropriate opportunity arose but did not require visitors to take one. Additional copies could be collected for family members. This explains why distribution was logged as a material count rather than a count of recipients. The office retained the approved card artwork so that later print orders could reproduce the same contact details and avoid inadvertently replacing them with an outdated telephone number.
+
+Water supplies were checked at opening and during routine room checks. Replacement cups were stored separately from cleaning products, and the storage shelf carried a label indicating which stock belonged to the pilot. Staff noted shortages and damaged packaging so that the next shift could replenish supplies. The stock process distinguished material brought into the hall from material actually used. A delivery did not count as visitor consumption, and an opened package was not treated as proof that every cup in it had been served.
+
+Reporting scope
+
+The completed cooling-center pilot provides an account of recorded visits, spending, and survey responses. The operational detail explains how the service and its records were organized. It does not identify unique attendance or establish a reduction in heat-related illness. Further activity remains a proposal requiring approval and an evaluation design appropriate to any future outcome claim.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 768
+final_tokens = 768
+llm_seed = 0
+target_words = [
+  300,
+  400,
+]
+required_facts = [
+  { id = "A1a", claim = "The pilot recorded 312 visits." },
+  { id = "A1b", claim = "Repeat visits were possible; the unique visitor count was unknown." },
+  { id = "A2", claim = "Recorded pilot expenditure was $4,800." },
+  { id = "A3a", claim = "The pilot did not establish a reduction in heat-related illness." },
+  { id = "A3b", claim = "Health-outcome data and a comparison neighborhood were absent." },
+]
+doc_target_tokens = 1800
+measured_doc_tokens = 1792
+
+[[tasks]]
+schema_version = 1
+task_id = "pinebridge-LL-t1800"
+doc_id = "pinebridge"
+profile = "LL"
+context_class = "long"
+response_class = "long"
+doc = '''
+Pinebridge Repair Pilot: Results
+
+Pinebridge operated a free household-item repair pilot at its public library on 12 Saturdays.
+
+The team recorded 96 item submissions from 71 distinct visitors. Some visitors submitted another item on a later Saturday.
+
+Volunteers recorded 58 completed repairs. Of those 58 items, 41 passed a functional test at the end of the session. The other 17 had no recorded final test, so their working condition was not confirmed by the records.
+
+Another 21 items were diagnosed but not repaired, and 17 were not fully assessed. These groups are separate from the 58 completed repairs.
+
+Parts and consumable supplies cost $620. Residents were not charged.
+
+The team did not follow up with visitors after the sessions. Therefore, the records cannot establish whether repaired items continued working at home.
+
+A second pilot has been proposed but has not been approved.
+
+Operational Background and Supporting Notes
+
+The repair pilot used a meeting room inside the public library. It was open from 10 a.m. to 2 p.m. on each of the 12 Saturdays. The room was arranged into an intake area, inspection tables, and a waiting area. Residents remained present while volunteers worked on their items. The pilot did not operate as a drop-off service in which items could be collected on a later day.
+
+The accepted categories were lamps, fans, toasters, and simple hand tools. The team recorded 34 lamps, 27 fans, 19 toasters, and 16 hand tools, which add to 96 submissions. Large appliances, gas-powered equipment, and items with damaged lithium batteries were outside the pilot's scope. The team did not record the age, brand, original price, or replacement price of submitted items.
+
+Each submission received a separate record. A participant could submit one item per visit and return with another item on a later Saturday. The team used participant identifiers to count 71 distinct visitors across the pilot. The 96 submissions should therefore not be described as 96 different people. Submission counts describe the workload presented to volunteers.
+
+The intake process included recording the item category, asking the visitor to describe the problem, and checking whether the item was within scope. Volunteers could decline further work when a problem exceeded their skills or required unavailable equipment. Being accepted at intake did not guarantee that an item would receive a diagnosis or a completed repair.
+
+The final records divided submissions into three mutually exclusive groups: 58 completed repairs, 21 diagnoses without a completed repair, and 17 items not fully assessed. These counts add to 96. The last group included cases in which the session ended or the visitor left before assessment was complete. The team did not record a detailed reason for every incomplete assessment.
+
+Completed repair was a workflow status entered by a volunteer. A separate field recorded whether a final functional test had been completed successfully. Of the 58 items marked repaired, 41 had a recorded successful test. The remaining 17 had no recorded final test. Missing test records do not prove that those items failed, but they also do not confirm that the items were working.
+
+The 21 diagnosed-but-not-repaired items remained outside the completed-repair count. Some required a replacement part that was unavailable, while others required work outside the pilot's scope. The records did not provide a reliable breakdown between those reasons. A report should therefore avoid assigning specific counts to the two explanations.
+
+There were 11 volunteers across the pilot, with no more than 5 present on any Saturday. They recorded 146 total volunteer hours, including setup and cleanup. Volunteer hours were not assigned to individual submissions. The records therefore do not support calculating an observed repair time for each item or comparing the labor required by item category.
+
+The association spent $620 on replacement parts and consumable supplies. Residents paid no fee. The library did not charge the pilot for the room, and volunteers were unpaid. The $620 figure is a spending category, not a complete valuation of labor, space, tools, and every other resource used. Existing tools included screwdrivers, pliers, multimeters, and safety glasses.
+
+Volunteers disconnected items from power before opening them and used safety glasses when appropriate. Repairs were stopped during two sessions after signs of overheating were observed. No injuries were reported. The pilot did not include a formal electrical-safety inspection by a licensed technician. A functional test should not be presented as a professional safety certification.
+
+An optional feedback form received 43 responses. Thirty-five respondents described the guidance as useful, six were unsure, and two did not find it useful. These responses concerned perceived usefulness of the guidance. They did not establish whether an item worked afterward, whether a replacement purchase was avoided, or how much money a visitor saved.
+
+The association did not contact participants after they left. There were no observations of performance at home or duration of continued use. The records cannot establish long-term reliability, avoided waste, or avoided purchases. Even the 41 successful end-of-session tests only describe the observed condition at that point in time.
+
+The proposed second pilot would allocate $1,000 to parts, provide another volunteer training session, and ask participants two weeks later whether their items still worked. It would also require a final test entry for every completed repair. These changes have not been approved, no start date has been chosen, and the proposed follow-up has not yet produced any data.
+
+Workshop preparation and work areas
+
+The library meeting room was prepared before public entry so that intake and repair work used different parts of the space. An arriving resident could describe an item at the entrance without walking through tables where tools were in use. Chairs for waiting residents were placed where volunteers could call someone forward without leaving an open item unattended. This arrangement was intended to support the session's workflow. The team did not observe movement systematically, so the layout cannot be used to calculate an average waiting time or measure visitor congestion.
+
+The equipment list distinguished association-owned tools from tools brought by individual volunteers. Labels identified which storage case an item belonged in, and the closing checklist asked volunteers to return tools to the appropriate case. A missing screwdriver or meter lead could then be addressed as a tool-control issue rather than recorded as an expense for a replacement part used in a resident's item. The equipment list described resources available for the workshop; it did not assign a market value to the full collection.
+
+The intake table displayed the accepted item categories and the principal exclusions. Staff used the notice to explain why a large appliance or an item with a damaged lithium battery could not be handled in the room. A conversation about an excluded item did not create a submission record unless the item was accepted into the pilot's documented workflow. The report's category totals therefore describe recorded submissions, and the team did not use informal questions at the door to estimate unmet demand outside the program's scope.
+
+For an accepted item, a volunteer asked the resident to describe the problem in ordinary language before deciding which inspection steps were appropriate. A statement such as an intermittent failure was entered as the resident's description, not as a confirmed diagnosis. The record separated that initial description from the volunteer's later assessment. This distinction allowed a reviewer to see why work began without assuming that every reported symptom had been independently reproduced during the limited time available at the session.
+
+Volunteers discussed how to allocate work according to familiarity with an item and the tools available. Someone comfortable inspecting a lamp might still need assistance with an unfamiliar switching mechanism. A second volunteer could examine the issue before work continued, and the team could stop when its skills were insufficient. That informal consultation was part of the workshop process. The project did not introduce a standardized skills examination or a rating that would support comparing the abilities of individual volunteers in the final report.
+
+Parts were stored in labeled containers so that small components could be identified without searching several worktables. A volunteer who used an available part noted the relevant information on the item record when practical. Unused stock remained association property for later sessions. A container holding spare components did not establish that every component had been purchased during this pilot or installed in a submitted item. The expenditure summary was based on purchases in the accounting records rather than an estimated value of everything visible in the room.
+
+Reporting scope
+
+The repair pilot documents submissions, distinct visitors, completed repair work, and the subset with successful recorded final tests. Supporting operational information explains how those measures were produced. It does not establish that every repaired item worked or continued operating at home. The proposed later pilot remains unapproved, and its planned record changes and follow-up are not results of the completed sessions.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 768
+final_tokens = 768
+llm_seed = 0
+target_words = [
+  300,
+  400,
+]
+required_facts = [
+  { id = "B1", claim = "There were 96 item submissions from 71 distinct visitors." },
+  { id = "B2a", claim = "There were 58 completed repairs." },
+  { id = "B2b", claim = "Only 41 of the completed repairs had a recorded successful final functional test." },
+  { id = "B3a", claim = "Continued operation at home was unknown." },
+  { id = "B3b", claim = "There was no follow-up after the sessions." },
+]
+doc_target_tokens = 1800
+measured_doc_tokens = 1766
+
+[[tasks]]
+schema_version = 1
+task_id = "westhaven-LL-t1800"
+doc_id = "westhaven"
+profile = "LL"
+context_class = "long"
+response_class = "long"
+doc = '''
+Westhaven Cooling Center: Pilot Results
+
+Westhaven operated a cooling center at the Community Hall for six weeks. It opened on 30 weekdays, from 1 p.m. to 7 p.m.
+
+Staff recorded 312 visits. A person could visit more than once, and the attendance system did not identify unique visitors.
+
+The recorded pilot expenditure was $4,800. This covered temporary staff, cooling equipment and electricity, supplies, and outreach. The city provided the hall without charging the pilot.
+
+An optional exit survey received 68 responses. Of these, 54 said they would return during a future heat event, 9 were unsure, and 5 would not return. These responses describe survey participants; they do not establish the opinions of all visitors.
+
+The pilot did not collect health-outcome data or include a comparison neighborhood. Therefore, the available evidence cannot establish whether the center reduced heat-related illness.
+
+The office has proposed another pilot, but it has not been approved.
+
+The expenditure ledger contained four categories: $2,700 for temporary staff, $1,350 for cooling equipment and electricity, $450 for water and paper supplies, and $300 for printing and outreach. These categories add to the recorded total. The ledger did not assign a monetary value to use of the city-owned hall. A future pilot at a different venue might therefore have a different cost structure even if attendance were similar.
+
+Staff recorded 186 visits between 1 p.m. and 4 p.m. and 126 visits between 4 p.m. and 7 p.m. These counts add to 312. They indicate when visits were recorded, not how long visitors stayed. A visitor arriving before 4 p.m. could remain afterward. The records cannot be used to calculate the number of people simultaneously present or the average duration of a visit.
+
+The daily log showed a maximum of 24 visits on one open day and a minimum of 2 on another. Dividing 312 visits by 30 open days gives 10.4 visits per open day. This average does not describe a typical person's behavior. It also does not show whether attendance changed because of temperature, publicity, transport availability, or other factors; those relationships were not analyzed.
+
+The center distributed 207 printed information cards and served 438 cups of water. Staff did not track which visitors received cards, whether they read them, or whether they changed their behavior. Visitors could take multiple cups of water. Neither the card count nor the cup count provides an independent estimate of unique attendance.
+
+Outreach consisted of library posters, neighborhood email notices, and information at two bus stops. The office did not purchase advertisements. Visitors were not systematically asked how they heard about the center. The records therefore cannot identify which outreach method produced the most visits or whether any part of the neighborhood was poorly reached.
+
+The exit survey was optional and was offered when staff were available. It was not randomly assigned, and the office did not link survey responses to attendance records. The team cannot calculate a response rate among unique visitors. The 54 positive responses show that some respondents expected to return, but intended future use is different from observed future attendance.
+
+No individual health information was collected. Staff did not measure changes in symptoms, emergency visits, or hospital admissions. There was also no comparison neighborhood. Attendance and survey results can support an operational description of the pilot, but they cannot establish a causal effect on heat-related illness.
+
+For another pilot, the office proposed recording anonymous visit duration estimates and asking how visitors heard about the center. It also proposed reviewing whether opening later on very hot days would be practical. These are planning suggestions. The office has not approved a new schedule, committed additional funding, or established that longer hours would improve health outcomes.
+
+Facility preparation and daily operations
+
+The room layout was documented before opening so that a substitute worker could prepare the space without relying on the usual team. Chairs faced inward rather than toward the registration desk, giving visitors a place to rest without appearing to queue for an interview. A clear route connected the entrance, seating, drinking-water table, and restroom corridor. Furniture from unrelated hall activities remained outside this route. The layout drawing was an operational reference, not a survey of how visitors actually moved through the building.
+
+A nearby bus stop and the library were included on the printed location map. The map identified the public entrance rather than a service door normally used for deliveries. Staff checked that the sign could be read from the sidewalk and that arrows did not direct people through a locked courtyard. They could explain the route to someone who telephoned, but they did not record callers' addresses or travel arrangements. Consequently, the map describes intended access and cannot be used to reconstruct the geographic distribution of attendance.
+
+The opening checklist assigned tasks to positions rather than to named employees. The opening worker checked public access and water supplies while the second worker prepared the visit sheet and information table. If the assigned person was absent, the replacement could identify unfinished tasks from the checklist. Workers initialed completed items and noted exceptions in a separate column. The checklist did not collect visitor information, and a completed checklist was not counted as evidence that anyone had attended the center.
+
+A notice near the entrance explained that the room was available for resting during the published hours. It listed the available facilities and told visitors that staff could not provide clinical advice. The same notice explained that attendance would be counted without collecting names. Staff were instructed to answer questions about the notice before directing a visitor to a chair. Reading the notice was voluntary; visitors were not required to sign an agreement or demonstrate that they understood the printed heat-safety material.
+
+Staffing coverage included a handover whenever a worker took a break. The departing worker identified any missing supplies, unresolved facility issue, or request for information that still needed attention. Personal details were not included in the general handover note. This arrangement maintained continuity at the entrance and water table while using the scheduled staffing complement. The notes describe work that staff considered unfinished; they do not measure service quality or establish whether every visitor received the same amount of assistance.
+
+Information cards were kept beside the water table and in a holder near the exit. Staff offered a card when an appropriate opportunity arose but did not require visitors to take one. Additional copies could be collected for family members. This explains why distribution was logged as a material count rather than a count of recipients. The office retained the approved card artwork so that later print orders could reproduce the same contact details and avoid inadvertently replacing them with an outdated telephone number.
+
+Water supplies were checked at opening and during routine room checks. Replacement cups were stored separately from cleaning products, and the storage shelf carried a label indicating which stock belonged to the pilot. Staff noted shortages and damaged packaging so that the next shift could replenish supplies. The stock process distinguished material brought into the hall from material actually used. A delivery did not count as visitor consumption, and an opened package was not treated as proof that every cup in it had been served.
+
+Equipment cables were routed along the edge of the room where possible. Workers checked for obvious damage before use and kept movable furniture away from electrical connections. They were expected to stop using equipment if they noticed an unusual smell, damaged plug, or other apparent fault, and then contact the building supervisor. Their role was limited to a basic operational check. The pilot did not commission a separate engineering evaluation, so these procedures do not establish equipment efficiency or certify the condition of the building's electrical installation.
+
+Attendance records and administrative controls
+
+The visit sheet was designed as a daily tally rather than a register of named participants. It included the date, the public opening period, and spaces for the two attendance intervals used in the report. Workers were asked to make marks when visits were recorded and reconcile the interval totals before filing the sheet. They did not add a personal identifier that could connect entries on different days. The design therefore supports reporting recorded visits while leaving repeat use by an individual unresolved.
+
+If a worker noticed an arithmetic mistake before the sheet was filed, the original entry remained visible and the corrected total was initialed. A note identified the reason for the correction, such as a sum written in the wrong interval column. Workers were not permitted to replace an attendance total with a guess based on water consumption or the number of chairs occupied. This preserved a traceable distinction between correcting the document and substituting a different, unvalidated method of estimating attendance.
+
+Reporting scope
+
+The completed cooling-center pilot provides an account of recorded visits, spending, and survey responses. The operational detail explains how the service and its records were organized. It does not identify unique attendance or establish a reduction in heat-related illness. Further activity remains a proposal requiring approval and an evaluation design appropriate to any future outcome claim.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 768
+final_tokens = 768
+llm_seed = 0
+target_words = [
+  300,
+  400,
+]
+required_facts = [
+  { id = "A1a", claim = "The pilot recorded 312 visits." },
+  { id = "A1b", claim = "Repeat visits were possible; the unique visitor count was unknown." },
+  { id = "A2", claim = "Recorded pilot expenditure was $4,800." },
+  { id = "A3a", claim = "The pilot did not establish a reduction in heat-related illness." },
+  { id = "A3b", claim = "Health-outcome data and a comparison neighborhood were absent." },
+]
+doc_target_tokens = 1800
+measured_doc_tokens = 1788
+
+[[tasks]]
+schema_version = 1
+task_id = "oakmere-LL-t1800"
+doc_id = "oakmere"
+profile = "LL"
+context_class = "long"
+response_class = "long"
+doc = '''
+Oakmere Repair Pilot: Results
+
+Oakmere operated a free household-item repair pilot at its public library on 12 Saturdays.
+
+The team recorded 96 item submissions from 71 distinct visitors. Some visitors submitted another item on a later Saturday.
+
+Volunteers recorded 58 completed repairs. Of those 58 items, 41 passed a functional test at the end of the session. The other 17 had no recorded final test, so their working condition was not confirmed by the records.
+
+Another 21 items were diagnosed but not repaired, and 17 were not fully assessed. These groups are separate from the 58 completed repairs.
+
+Parts and consumable supplies cost $620. Residents were not charged.
+
+The team did not follow up with visitors after the sessions. Therefore, the records cannot establish whether repaired items continued working at home.
+
+A second pilot has been proposed but has not been approved.
+
+The final records divided submissions into three mutually exclusive groups: 58 completed repairs, 21 diagnoses without a completed repair, and 17 items not fully assessed. These counts add to 96. The last group included cases in which the session ended or the visitor left before assessment was complete. The team did not record a detailed reason for every incomplete assessment.
+
+Completed repair was a workflow status entered by a volunteer. A separate field recorded whether a final functional test had been completed successfully. Of the 58 items marked repaired, 41 had a recorded successful test. The remaining 17 had no recorded final test. Missing test records do not prove that those items failed, but they also do not confirm that the items were working.
+
+The 21 diagnosed-but-not-repaired items remained outside the completed-repair count. Some required a replacement part that was unavailable, while others required work outside the pilot's scope. The records did not provide a reliable breakdown between those reasons. A report should therefore avoid assigning specific counts to the two explanations.
+
+There were 11 volunteers across the pilot, with no more than 5 present on any Saturday. They recorded 146 total volunteer hours, including setup and cleanup. Volunteer hours were not assigned to individual submissions. The records therefore do not support calculating an observed repair time for each item or comparing the labor required by item category.
+
+The association spent $620 on replacement parts and consumable supplies. Residents paid no fee. The library did not charge the pilot for the room, and volunteers were unpaid. The $620 figure is a spending category, not a complete valuation of labor, space, tools, and every other resource used. Existing tools included screwdrivers, pliers, multimeters, and safety glasses.
+
+Volunteers disconnected items from power before opening them and used safety glasses when appropriate. Repairs were stopped during two sessions after signs of overheating were observed. No injuries were reported. The pilot did not include a formal electrical-safety inspection by a licensed technician. A functional test should not be presented as a professional safety certification.
+
+An optional feedback form received 43 responses. Thirty-five respondents described the guidance as useful, six were unsure, and two did not find it useful. These responses concerned perceived usefulness of the guidance. They did not establish whether an item worked afterward, whether a replacement purchase was avoided, or how much money a visitor saved.
+
+The association did not contact participants after they left. There were no observations of performance at home or duration of continued use. The records cannot establish long-term reliability, avoided waste, or avoided purchases. Even the 41 successful end-of-session tests only describe the observed condition at that point in time.
+
+The proposed second pilot would allocate $1,000 to parts, provide another volunteer training session, and ask participants two weeks later whether their items still worked. It would also require a final test entry for every completed repair. These changes have not been approved, no start date has been chosen, and the proposed follow-up has not yet produced any data.
+
+Workshop preparation and work areas
+
+The library meeting room was prepared before public entry so that intake and repair work used different parts of the space. An arriving resident could describe an item at the entrance without walking through tables where tools were in use. Chairs for waiting residents were placed where volunteers could call someone forward without leaving an open item unattended. This arrangement was intended to support the session's workflow. The team did not observe movement systematically, so the layout cannot be used to calculate an average waiting time or measure visitor congestion.
+
+The equipment list distinguished association-owned tools from tools brought by individual volunteers. Labels identified which storage case an item belonged in, and the closing checklist asked volunteers to return tools to the appropriate case. A missing screwdriver or meter lead could then be addressed as a tool-control issue rather than recorded as an expense for a replacement part used in a resident's item. The equipment list described resources available for the workshop; it did not assign a market value to the full collection.
+
+The intake table displayed the accepted item categories and the principal exclusions. Staff used the notice to explain why a large appliance or an item with a damaged lithium battery could not be handled in the room. A conversation about an excluded item did not create a submission record unless the item was accepted into the pilot's documented workflow. The report's category totals therefore describe recorded submissions, and the team did not use informal questions at the door to estimate unmet demand outside the program's scope.
+
+For an accepted item, a volunteer asked the resident to describe the problem in ordinary language before deciding which inspection steps were appropriate. A statement such as an intermittent failure was entered as the resident's description, not as a confirmed diagnosis. The record separated that initial description from the volunteer's later assessment. This distinction allowed a reviewer to see why work began without assuming that every reported symptom had been independently reproduced during the limited time available at the session.
+
+Volunteers discussed how to allocate work according to familiarity with an item and the tools available. Someone comfortable inspecting a lamp might still need assistance with an unfamiliar switching mechanism. A second volunteer could examine the issue before work continued, and the team could stop when its skills were insufficient. That informal consultation was part of the workshop process. The project did not introduce a standardized skills examination or a rating that would support comparing the abilities of individual volunteers in the final report.
+
+Parts were stored in labeled containers so that small components could be identified without searching several worktables. A volunteer who used an available part noted the relevant information on the item record when practical. Unused stock remained association property for later sessions. A container holding spare components did not establish that every component had been purchased during this pilot or installed in a submitted item. The expenditure summary was based on purchases in the accounting records rather than an estimated value of everything visible in the room.
+
+Cleaning materials were stored away from open items and electrical equipment. At closing, volunteers checked the work surfaces for loose screws and other small parts that could belong to a resident's item. They asked residents to keep removable accessories with the associated submission whenever possible. These housekeeping measures supported orderly work and return of items. The team did not undertake a separate loss audit, so a description of its cleaning procedure should not be presented as a measured rate of component retention or proof that no accessory was ever misplaced.
+
+The public session had a fixed closing time. Volunteers were encouraged to explain the remaining work before beginning a procedure that could not reasonably be completed within that period. When an assessment remained unfinished, the record was expected to reflect the actual status at closing rather than the status the volunteer hoped to achieve later. Residents left with their items. The workshop did not create a continuing repair obligation or keep unfinished items in storage for volunteers to work on between Saturdays.
+
+Item inspection and diagnostic limits
+
+Lamp assessment could include examining accessible connections and checking whether a visible component appeared loose or damaged. The precise sequence depended on the design of the item and the volunteer's competence. The team did not require a common diagnostic test for every lamp, and it did not code each inspection step into a research dataset. Consequently, the count of submitted lamps cannot be treated as a count of a particular electrical fault, a standardized assessment, or a uniform repair procedure performed across the category.
+
+Fan assessment involved considering the resident's description alongside the condition observed during the session. Access to moving components required appropriate caution, and a volunteer could decline to continue if a guard or housing could not be handled safely. The project did not record a reliable breakdown of fan problems by mechanism. A report could describe the general assessment approach, but it could not assign numerical shares to motor faults, mechanical obstruction, switching problems, or any other explanation that was not consistently coded.
+
+Reporting scope
+
+The repair pilot documents submissions, distinct visitors, completed repair work, and the subset with successful recorded final tests. Supporting operational information explains how those measures were produced. It does not establish that every repaired item worked or continued operating at home. The proposed later pilot remains unapproved, and its planned record changes and follow-up are not results of the completed sessions.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 768
+final_tokens = 768
+llm_seed = 0
+target_words = [
+  300,
+  400,
+]
+required_facts = [
+  { id = "B1", claim = "There were 96 item submissions from 71 distinct visitors." },
+  { id = "B2a", claim = "There were 58 completed repairs." },
+  { id = "B2b", claim = "Only 41 of the completed repairs had a recorded successful final functional test." },
+  { id = "B3a", claim = "Continued operation at home was unknown." },
+  { id = "B3b", claim = "There was no follow-up after the sessions." },
+]
+doc_target_tokens = 1800
+measured_doc_tokens = 1833
+
+[[tasks]]
+schema_version = 1
+task_id = "harborview-LL-t2000"
+doc_id = "harborview"
+profile = "LL"
+context_class = "long"
+response_class = "long"
+doc = '''
+Harborview Cooling Center: Pilot Results
+
+Harborview operated a cooling center at the Community Hall for six weeks. It opened on 30 weekdays, from 1 p.m. to 7 p.m.
+
+Staff recorded 312 visits. A person could visit more than once, and the attendance system did not identify unique visitors.
+
+The recorded pilot expenditure was $4,800. This covered temporary staff, cooling equipment and electricity, supplies, and outreach. The city provided the hall without charging the pilot.
+
+An optional exit survey received 68 responses. Of these, 54 said they would return during a future heat event, 9 were unsure, and 5 would not return. These responses describe survey participants; they do not establish the opinions of all visitors.
+
+The pilot did not collect health-outcome data or include a comparison neighborhood. Therefore, the available evidence cannot establish whether the center reduced heat-related illness.
+
+The office has proposed another pilot, but it has not been approved.
+
+Operational Background and Supporting Notes
+
+The Community Hall was selected because it already had an accessible entrance, public restrooms, tables, chairs, and a room that could be separated from other activities. Selecting an existing building allowed the office to begin the pilot without construction work. The office did not compare the hall with alternative locations. Convenient access was a reason for choosing the site, but travel times were not measured.
+
+The center was intended to provide a place to rest during hot afternoons. Staff offered drinking water and printed heat-safety information. They did not provide medical treatment, individual medical assessments, transportation, or overnight accommodation. Visitors who needed services outside this scope were directed to existing city information channels. The pilot did not record what happened after such referrals.
+
+Opening procedures began before public access. Staff checked the entrance, arranged chairs, inspected water supplies, and confirmed that the room was ready. Closing procedures included collecting unused materials, checking the room, and completing the daily log. The published opening hours described access for visitors; they were not a measurement of total staff working time.
+
+Two temporary staff members were scheduled on each open day. Their duties included welcoming visitors, recording visits, answering basic questions, and keeping supplies available. Permanent public-health employees planned and supervised the pilot. Their salaries were outside the recorded $4,800 expenditure. Consequently, that figure should not be described as a complete economic valuation of every resource used.
+
+The expenditure ledger contained four categories: $2,700 for temporary staff, $1,350 for cooling equipment and electricity, $450 for water and paper supplies, and $300 for printing and outreach. These categories add to the recorded total. The ledger did not assign a monetary value to use of the city-owned hall. A future pilot at a different venue might therefore have a different cost structure even if attendance were similar.
+
+Staff recorded 186 visits between 1 p.m. and 4 p.m. and 126 visits between 4 p.m. and 7 p.m. These counts add to 312. They indicate when visits were recorded, not how long visitors stayed. A visitor arriving before 4 p.m. could remain afterward. The records cannot be used to calculate the number of people simultaneously present or the average duration of a visit.
+
+The daily log showed a maximum of 24 visits on one open day and a minimum of 2 on another. Dividing 312 visits by 30 open days gives 10.4 visits per open day. This average does not describe a typical person's behavior. It also does not show whether attendance changed because of temperature, publicity, transport availability, or other factors; those relationships were not analyzed.
+
+The center distributed 207 printed information cards and served 438 cups of water. Staff did not track which visitors received cards, whether they read them, or whether they changed their behavior. Visitors could take multiple cups of water. Neither the card count nor the cup count provides an independent estimate of unique attendance.
+
+Outreach consisted of library posters, neighborhood email notices, and information at two bus stops. The office did not purchase advertisements. Visitors were not systematically asked how they heard about the center. The records therefore cannot identify which outreach method produced the most visits or whether any part of the neighborhood was poorly reached.
+
+The exit survey was optional and was offered when staff were available. It was not randomly assigned, and the office did not link survey responses to attendance records. The team cannot calculate a response rate among unique visitors. The 54 positive responses show that some respondents expected to return, but intended future use is different from observed future attendance.
+
+No individual health information was collected. Staff did not measure changes in symptoms, emergency visits, or hospital admissions. There was also no comparison neighborhood. Attendance and survey results can support an operational description of the pilot, but they cannot establish a causal effect on heat-related illness.
+
+For another pilot, the office proposed recording anonymous visit duration estimates and asking how visitors heard about the center. It also proposed reviewing whether opening later on very hot days would be practical. These are planning suggestions. The office has not approved a new schedule, committed additional funding, or established that longer hours would improve health outcomes.
+
+Facility preparation and daily operations
+
+The room layout was documented before opening so that a substitute worker could prepare the space without relying on the usual team. Chairs faced inward rather than toward the registration desk, giving visitors a place to rest without appearing to queue for an interview. A clear route connected the entrance, seating, drinking-water table, and restroom corridor. Furniture from unrelated hall activities remained outside this route. The layout drawing was an operational reference, not a survey of how visitors actually moved through the building.
+
+A nearby bus stop and the library were included on the printed location map. The map identified the public entrance rather than a service door normally used for deliveries. Staff checked that the sign could be read from the sidewalk and that arrows did not direct people through a locked courtyard. They could explain the route to someone who telephoned, but they did not record callers' addresses or travel arrangements. Consequently, the map describes intended access and cannot be used to reconstruct the geographic distribution of attendance.
+
+The opening checklist assigned tasks to positions rather than to named employees. The opening worker checked public access and water supplies while the second worker prepared the visit sheet and information table. If the assigned person was absent, the replacement could identify unfinished tasks from the checklist. Workers initialed completed items and noted exceptions in a separate column. The checklist did not collect visitor information, and a completed checklist was not counted as evidence that anyone had attended the center.
+
+A notice near the entrance explained that the room was available for resting during the published hours. It listed the available facilities and told visitors that staff could not provide clinical advice. The same notice explained that attendance would be counted without collecting names. Staff were instructed to answer questions about the notice before directing a visitor to a chair. Reading the notice was voluntary; visitors were not required to sign an agreement or demonstrate that they understood the printed heat-safety material.
+
+Staffing coverage included a handover whenever a worker took a break. The departing worker identified any missing supplies, unresolved facility issue, or request for information that still needed attention. Personal details were not included in the general handover note. This arrangement maintained continuity at the entrance and water table while using the scheduled staffing complement. The notes describe work that staff considered unfinished; they do not measure service quality or establish whether every visitor received the same amount of assistance.
+
+Information cards were kept beside the water table and in a holder near the exit. Staff offered a card when an appropriate opportunity arose but did not require visitors to take one. Additional copies could be collected for family members. This explains why distribution was logged as a material count rather than a count of recipients. The office retained the approved card artwork so that later print orders could reproduce the same contact details and avoid inadvertently replacing them with an outdated telephone number.
+
+Water supplies were checked at opening and during routine room checks. Replacement cups were stored separately from cleaning products, and the storage shelf carried a label indicating which stock belonged to the pilot. Staff noted shortages and damaged packaging so that the next shift could replenish supplies. The stock process distinguished material brought into the hall from material actually used. A delivery did not count as visitor consumption, and an opened package was not treated as proof that every cup in it had been served.
+
+Equipment cables were routed along the edge of the room where possible. Workers checked for obvious damage before use and kept movable furniture away from electrical connections. They were expected to stop using equipment if they noticed an unusual smell, damaged plug, or other apparent fault, and then contact the building supervisor. Their role was limited to a basic operational check. The pilot did not commission a separate engineering evaluation, so these procedures do not establish equipment efficiency or certify the condition of the building's electrical installation.
+
+Attendance records and administrative controls
+
+The visit sheet was designed as a daily tally rather than a register of named participants. It included the date, the public opening period, and spaces for the two attendance intervals used in the report. Workers were asked to make marks when visits were recorded and reconcile the interval totals before filing the sheet. They did not add a personal identifier that could connect entries on different days. The design therefore supports reporting recorded visits while leaving repeat use by an individual unresolved.
+
+Reporting scope
+
+The completed cooling-center pilot provides an account of recorded visits, spending, and survey responses. The operational detail explains how the service and its records were organized. It does not identify unique attendance or establish a reduction in heat-related illness. Further activity remains a proposal requiring approval and an evaluation design appropriate to any future outcome claim.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 768
+final_tokens = 768
+llm_seed = 0
+target_words = [
+  300,
+  400,
+]
+required_facts = [
+  { id = "A1a", claim = "The pilot recorded 312 visits." },
+  { id = "A1b", claim = "Repeat visits were possible; the unique visitor count was unknown." },
+  { id = "A2", claim = "Recorded pilot expenditure was $4,800." },
+  { id = "A3a", claim = "The pilot did not establish a reduction in heat-related illness." },
+  { id = "A3b", claim = "Health-outcome data and a comparison neighborhood were absent." },
+]
+doc_target_tokens = 2000
+measured_doc_tokens = 1985
+
+[[tasks]]
+schema_version = 1
+task_id = "pinebridge-LL-t2000"
+doc_id = "pinebridge"
+profile = "LL"
+context_class = "long"
+response_class = "long"
+doc = '''
+Pinebridge Repair Pilot: Results
+
+Pinebridge operated a free household-item repair pilot at its public library on 12 Saturdays.
+
+The team recorded 96 item submissions from 71 distinct visitors. Some visitors submitted another item on a later Saturday.
+
+Volunteers recorded 58 completed repairs. Of those 58 items, 41 passed a functional test at the end of the session. The other 17 had no recorded final test, so their working condition was not confirmed by the records.
+
+Another 21 items were diagnosed but not repaired, and 17 were not fully assessed. These groups are separate from the 58 completed repairs.
+
+Parts and consumable supplies cost $620. Residents were not charged.
+
+The team did not follow up with visitors after the sessions. Therefore, the records cannot establish whether repaired items continued working at home.
+
+A second pilot has been proposed but has not been approved.
+
+Operational Background and Supporting Notes
+
+The repair pilot used a meeting room inside the public library. It was open from 10 a.m. to 2 p.m. on each of the 12 Saturdays. The room was arranged into an intake area, inspection tables, and a waiting area. Residents remained present while volunteers worked on their items. The pilot did not operate as a drop-off service in which items could be collected on a later day.
+
+The accepted categories were lamps, fans, toasters, and simple hand tools. The team recorded 34 lamps, 27 fans, 19 toasters, and 16 hand tools, which add to 96 submissions. Large appliances, gas-powered equipment, and items with damaged lithium batteries were outside the pilot's scope. The team did not record the age, brand, original price, or replacement price of submitted items.
+
+Each submission received a separate record. A participant could submit one item per visit and return with another item on a later Saturday. The team used participant identifiers to count 71 distinct visitors across the pilot. The 96 submissions should therefore not be described as 96 different people. Submission counts describe the workload presented to volunteers.
+
+The intake process included recording the item category, asking the visitor to describe the problem, and checking whether the item was within scope. Volunteers could decline further work when a problem exceeded their skills or required unavailable equipment. Being accepted at intake did not guarantee that an item would receive a diagnosis or a completed repair.
+
+The final records divided submissions into three mutually exclusive groups: 58 completed repairs, 21 diagnoses without a completed repair, and 17 items not fully assessed. These counts add to 96. The last group included cases in which the session ended or the visitor left before assessment was complete. The team did not record a detailed reason for every incomplete assessment.
+
+Completed repair was a workflow status entered by a volunteer. A separate field recorded whether a final functional test had been completed successfully. Of the 58 items marked repaired, 41 had a recorded successful test. The remaining 17 had no recorded final test. Missing test records do not prove that those items failed, but they also do not confirm that the items were working.
+
+The 21 diagnosed-but-not-repaired items remained outside the completed-repair count. Some required a replacement part that was unavailable, while others required work outside the pilot's scope. The records did not provide a reliable breakdown between those reasons. A report should therefore avoid assigning specific counts to the two explanations.
+
+There were 11 volunteers across the pilot, with no more than 5 present on any Saturday. They recorded 146 total volunteer hours, including setup and cleanup. Volunteer hours were not assigned to individual submissions. The records therefore do not support calculating an observed repair time for each item or comparing the labor required by item category.
+
+The association spent $620 on replacement parts and consumable supplies. Residents paid no fee. The library did not charge the pilot for the room, and volunteers were unpaid. The $620 figure is a spending category, not a complete valuation of labor, space, tools, and every other resource used. Existing tools included screwdrivers, pliers, multimeters, and safety glasses.
+
+Volunteers disconnected items from power before opening them and used safety glasses when appropriate. Repairs were stopped during two sessions after signs of overheating were observed. No injuries were reported. The pilot did not include a formal electrical-safety inspection by a licensed technician. A functional test should not be presented as a professional safety certification.
+
+An optional feedback form received 43 responses. Thirty-five respondents described the guidance as useful, six were unsure, and two did not find it useful. These responses concerned perceived usefulness of the guidance. They did not establish whether an item worked afterward, whether a replacement purchase was avoided, or how much money a visitor saved.
+
+The association did not contact participants after they left. There were no observations of performance at home or duration of continued use. The records cannot establish long-term reliability, avoided waste, or avoided purchases. Even the 41 successful end-of-session tests only describe the observed condition at that point in time.
+
+The proposed second pilot would allocate $1,000 to parts, provide another volunteer training session, and ask participants two weeks later whether their items still worked. It would also require a final test entry for every completed repair. These changes have not been approved, no start date has been chosen, and the proposed follow-up has not yet produced any data.
+
+Workshop preparation and work areas
+
+The library meeting room was prepared before public entry so that intake and repair work used different parts of the space. An arriving resident could describe an item at the entrance without walking through tables where tools were in use. Chairs for waiting residents were placed where volunteers could call someone forward without leaving an open item unattended. This arrangement was intended to support the session's workflow. The team did not observe movement systematically, so the layout cannot be used to calculate an average waiting time or measure visitor congestion.
+
+The equipment list distinguished association-owned tools from tools brought by individual volunteers. Labels identified which storage case an item belonged in, and the closing checklist asked volunteers to return tools to the appropriate case. A missing screwdriver or meter lead could then be addressed as a tool-control issue rather than recorded as an expense for a replacement part used in a resident's item. The equipment list described resources available for the workshop; it did not assign a market value to the full collection.
+
+The intake table displayed the accepted item categories and the principal exclusions. Staff used the notice to explain why a large appliance or an item with a damaged lithium battery could not be handled in the room. A conversation about an excluded item did not create a submission record unless the item was accepted into the pilot's documented workflow. The report's category totals therefore describe recorded submissions, and the team did not use informal questions at the door to estimate unmet demand outside the program's scope.
+
+For an accepted item, a volunteer asked the resident to describe the problem in ordinary language before deciding which inspection steps were appropriate. A statement such as an intermittent failure was entered as the resident's description, not as a confirmed diagnosis. The record separated that initial description from the volunteer's later assessment. This distinction allowed a reviewer to see why work began without assuming that every reported symptom had been independently reproduced during the limited time available at the session.
+
+Volunteers discussed how to allocate work according to familiarity with an item and the tools available. Someone comfortable inspecting a lamp might still need assistance with an unfamiliar switching mechanism. A second volunteer could examine the issue before work continued, and the team could stop when its skills were insufficient. That informal consultation was part of the workshop process. The project did not introduce a standardized skills examination or a rating that would support comparing the abilities of individual volunteers in the final report.
+
+Parts were stored in labeled containers so that small components could be identified without searching several worktables. A volunteer who used an available part noted the relevant information on the item record when practical. Unused stock remained association property for later sessions. A container holding spare components did not establish that every component had been purchased during this pilot or installed in a submitted item. The expenditure summary was based on purchases in the accounting records rather than an estimated value of everything visible in the room.
+
+Cleaning materials were stored away from open items and electrical equipment. At closing, volunteers checked the work surfaces for loose screws and other small parts that could belong to a resident's item. They asked residents to keep removable accessories with the associated submission whenever possible. These housekeeping measures supported orderly work and return of items. The team did not undertake a separate loss audit, so a description of its cleaning procedure should not be presented as a measured rate of component retention or proof that no accessory was ever misplaced.
+
+The public session had a fixed closing time. Volunteers were encouraged to explain the remaining work before beginning a procedure that could not reasonably be completed within that period. When an assessment remained unfinished, the record was expected to reflect the actual status at closing rather than the status the volunteer hoped to achieve later. Residents left with their items. The workshop did not create a continuing repair obligation or keep unfinished items in storage for volunteers to work on between Saturdays.
+
+Reporting scope
+
+The repair pilot documents submissions, distinct visitors, completed repair work, and the subset with successful recorded final tests. Supporting operational information explains how those measures were produced. It does not establish that every repaired item worked or continued operating at home. The proposed later pilot remains unapproved, and its planned record changes and follow-up are not results of the completed sessions.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 768
+final_tokens = 768
+llm_seed = 0
+target_words = [
+  300,
+  400,
+]
+required_facts = [
+  { id = "B1", claim = "There were 96 item submissions from 71 distinct visitors." },
+  { id = "B2a", claim = "There were 58 completed repairs." },
+  { id = "B2b", claim = "Only 41 of the completed repairs had a recorded successful final functional test." },
+  { id = "B3a", claim = "Continued operation at home was unknown." },
+  { id = "B3b", claim = "There was no follow-up after the sessions." },
+]
+doc_target_tokens = 2000
+measured_doc_tokens = 1953
+
+[[tasks]]
+schema_version = 1
+task_id = "westhaven-LL-t2000"
+doc_id = "westhaven"
+profile = "LL"
+context_class = "long"
+response_class = "long"
+doc = '''
+Westhaven Cooling Center: Pilot Results
+
+Westhaven operated a cooling center at the Community Hall for six weeks. It opened on 30 weekdays, from 1 p.m. to 7 p.m.
+
+Staff recorded 312 visits. A person could visit more than once, and the attendance system did not identify unique visitors.
+
+The recorded pilot expenditure was $4,800. This covered temporary staff, cooling equipment and electricity, supplies, and outreach. The city provided the hall without charging the pilot.
+
+An optional exit survey received 68 responses. Of these, 54 said they would return during a future heat event, 9 were unsure, and 5 would not return. These responses describe survey participants; they do not establish the opinions of all visitors.
+
+The pilot did not collect health-outcome data or include a comparison neighborhood. Therefore, the available evidence cannot establish whether the center reduced heat-related illness.
+
+The office has proposed another pilot, but it has not been approved.
+
+The expenditure ledger contained four categories: $2,700 for temporary staff, $1,350 for cooling equipment and electricity, $450 for water and paper supplies, and $300 for printing and outreach. These categories add to the recorded total. The ledger did not assign a monetary value to use of the city-owned hall. A future pilot at a different venue might therefore have a different cost structure even if attendance were similar.
+
+Staff recorded 186 visits between 1 p.m. and 4 p.m. and 126 visits between 4 p.m. and 7 p.m. These counts add to 312. They indicate when visits were recorded, not how long visitors stayed. A visitor arriving before 4 p.m. could remain afterward. The records cannot be used to calculate the number of people simultaneously present or the average duration of a visit.
+
+The daily log showed a maximum of 24 visits on one open day and a minimum of 2 on another. Dividing 312 visits by 30 open days gives 10.4 visits per open day. This average does not describe a typical person's behavior. It also does not show whether attendance changed because of temperature, publicity, transport availability, or other factors; those relationships were not analyzed.
+
+The center distributed 207 printed information cards and served 438 cups of water. Staff did not track which visitors received cards, whether they read them, or whether they changed their behavior. Visitors could take multiple cups of water. Neither the card count nor the cup count provides an independent estimate of unique attendance.
+
+Outreach consisted of library posters, neighborhood email notices, and information at two bus stops. The office did not purchase advertisements. Visitors were not systematically asked how they heard about the center. The records therefore cannot identify which outreach method produced the most visits or whether any part of the neighborhood was poorly reached.
+
+The exit survey was optional and was offered when staff were available. It was not randomly assigned, and the office did not link survey responses to attendance records. The team cannot calculate a response rate among unique visitors. The 54 positive responses show that some respondents expected to return, but intended future use is different from observed future attendance.
+
+No individual health information was collected. Staff did not measure changes in symptoms, emergency visits, or hospital admissions. There was also no comparison neighborhood. Attendance and survey results can support an operational description of the pilot, but they cannot establish a causal effect on heat-related illness.
+
+For another pilot, the office proposed recording anonymous visit duration estimates and asking how visitors heard about the center. It also proposed reviewing whether opening later on very hot days would be practical. These are planning suggestions. The office has not approved a new schedule, committed additional funding, or established that longer hours would improve health outcomes.
+
+Facility preparation and daily operations
+
+The room layout was documented before opening so that a substitute worker could prepare the space without relying on the usual team. Chairs faced inward rather than toward the registration desk, giving visitors a place to rest without appearing to queue for an interview. A clear route connected the entrance, seating, drinking-water table, and restroom corridor. Furniture from unrelated hall activities remained outside this route. The layout drawing was an operational reference, not a survey of how visitors actually moved through the building.
+
+A nearby bus stop and the library were included on the printed location map. The map identified the public entrance rather than a service door normally used for deliveries. Staff checked that the sign could be read from the sidewalk and that arrows did not direct people through a locked courtyard. They could explain the route to someone who telephoned, but they did not record callers' addresses or travel arrangements. Consequently, the map describes intended access and cannot be used to reconstruct the geographic distribution of attendance.
+
+The opening checklist assigned tasks to positions rather than to named employees. The opening worker checked public access and water supplies while the second worker prepared the visit sheet and information table. If the assigned person was absent, the replacement could identify unfinished tasks from the checklist. Workers initialed completed items and noted exceptions in a separate column. The checklist did not collect visitor information, and a completed checklist was not counted as evidence that anyone had attended the center.
+
+A notice near the entrance explained that the room was available for resting during the published hours. It listed the available facilities and told visitors that staff could not provide clinical advice. The same notice explained that attendance would be counted without collecting names. Staff were instructed to answer questions about the notice before directing a visitor to a chair. Reading the notice was voluntary; visitors were not required to sign an agreement or demonstrate that they understood the printed heat-safety material.
+
+Staffing coverage included a handover whenever a worker took a break. The departing worker identified any missing supplies, unresolved facility issue, or request for information that still needed attention. Personal details were not included in the general handover note. This arrangement maintained continuity at the entrance and water table while using the scheduled staffing complement. The notes describe work that staff considered unfinished; they do not measure service quality or establish whether every visitor received the same amount of assistance.
+
+Information cards were kept beside the water table and in a holder near the exit. Staff offered a card when an appropriate opportunity arose but did not require visitors to take one. Additional copies could be collected for family members. This explains why distribution was logged as a material count rather than a count of recipients. The office retained the approved card artwork so that later print orders could reproduce the same contact details and avoid inadvertently replacing them with an outdated telephone number.
+
+Water supplies were checked at opening and during routine room checks. Replacement cups were stored separately from cleaning products, and the storage shelf carried a label indicating which stock belonged to the pilot. Staff noted shortages and damaged packaging so that the next shift could replenish supplies. The stock process distinguished material brought into the hall from material actually used. A delivery did not count as visitor consumption, and an opened package was not treated as proof that every cup in it had been served.
+
+Equipment cables were routed along the edge of the room where possible. Workers checked for obvious damage before use and kept movable furniture away from electrical connections. They were expected to stop using equipment if they noticed an unusual smell, damaged plug, or other apparent fault, and then contact the building supervisor. Their role was limited to a basic operational check. The pilot did not commission a separate engineering evaluation, so these procedures do not establish equipment efficiency or certify the condition of the building's electrical installation.
+
+Attendance records and administrative controls
+
+The visit sheet was designed as a daily tally rather than a register of named participants. It included the date, the public opening period, and spaces for the two attendance intervals used in the report. Workers were asked to make marks when visits were recorded and reconcile the interval totals before filing the sheet. They did not add a personal identifier that could connect entries on different days. The design therefore supports reporting recorded visits while leaving repeat use by an individual unresolved.
+
+If a worker noticed an arithmetic mistake before the sheet was filed, the original entry remained visible and the corrected total was initialed. A note identified the reason for the correction, such as a sum written in the wrong interval column. Workers were not permitted to replace an attendance total with a guess based on water consumption or the number of chairs occupied. This preserved a traceable distinction between correcting the document and substituting a different, unvalidated method of estimating attendance.
+
+At the end of each week, the administrative coordinator checked that a sheet was present for each scheduled open day. The coordinator also reviewed whether the interval figures agreed with the daily total. This was a completeness and arithmetic check, not an independent recount of everyone who entered the hall. A correctly added sheet can still reflect missed or inconsistent recording at the entrance. The final report treats the tally as the available operational record rather than claiming that its measurement error was independently assessed.
+
+The hall's schedule was maintained separately from the pilot's visit records. It included setup access, regular public opening hours, and unrelated bookings elsewhere in the building. A date appearing in that calendar did not by itself show that the cooling room opened or that a visitor attended. When assembling the report, staff used the pilot's opening records for the operating-day count and the visit sheets for attendance. Keeping the sources distinct prevented room reservations from being mistaken for observed service activity.
+
+Reporting scope
+
+The completed cooling-center pilot provides an account of recorded visits, spending, and survey responses. The operational detail explains how the service and its records were organized. It does not identify unique attendance or establish a reduction in heat-related illness. Further activity remains a proposal requiring approval and an evaluation design appropriate to any future outcome claim.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 768
+final_tokens = 768
+llm_seed = 0
+target_words = [
+  300,
+  400,
+]
+required_facts = [
+  { id = "A1a", claim = "The pilot recorded 312 visits." },
+  { id = "A1b", claim = "Repeat visits were possible; the unique visitor count was unknown." },
+  { id = "A2", claim = "Recorded pilot expenditure was $4,800." },
+  { id = "A3a", claim = "The pilot did not establish a reduction in heat-related illness." },
+  { id = "A3b", claim = "Health-outcome data and a comparison neighborhood were absent." },
+]
+doc_target_tokens = 2000
+measured_doc_tokens = 1973
+
+[[tasks]]
+schema_version = 1
+task_id = "oakmere-LL-t2000"
+doc_id = "oakmere"
+profile = "LL"
+context_class = "long"
+response_class = "long"
+doc = '''
+Oakmere Repair Pilot: Results
+
+Oakmere operated a free household-item repair pilot at its public library on 12 Saturdays.
+
+The team recorded 96 item submissions from 71 distinct visitors. Some visitors submitted another item on a later Saturday.
+
+Volunteers recorded 58 completed repairs. Of those 58 items, 41 passed a functional test at the end of the session. The other 17 had no recorded final test, so their working condition was not confirmed by the records.
+
+Another 21 items were diagnosed but not repaired, and 17 were not fully assessed. These groups are separate from the 58 completed repairs.
+
+Parts and consumable supplies cost $620. Residents were not charged.
+
+The team did not follow up with visitors after the sessions. Therefore, the records cannot establish whether repaired items continued working at home.
+
+A second pilot has been proposed but has not been approved.
+
+The final records divided submissions into three mutually exclusive groups: 58 completed repairs, 21 diagnoses without a completed repair, and 17 items not fully assessed. These counts add to 96. The last group included cases in which the session ended or the visitor left before assessment was complete. The team did not record a detailed reason for every incomplete assessment.
+
+Completed repair was a workflow status entered by a volunteer. A separate field recorded whether a final functional test had been completed successfully. Of the 58 items marked repaired, 41 had a recorded successful test. The remaining 17 had no recorded final test. Missing test records do not prove that those items failed, but they also do not confirm that the items were working.
+
+The 21 diagnosed-but-not-repaired items remained outside the completed-repair count. Some required a replacement part that was unavailable, while others required work outside the pilot's scope. The records did not provide a reliable breakdown between those reasons. A report should therefore avoid assigning specific counts to the two explanations.
+
+There were 11 volunteers across the pilot, with no more than 5 present on any Saturday. They recorded 146 total volunteer hours, including setup and cleanup. Volunteer hours were not assigned to individual submissions. The records therefore do not support calculating an observed repair time for each item or comparing the labor required by item category.
+
+The association spent $620 on replacement parts and consumable supplies. Residents paid no fee. The library did not charge the pilot for the room, and volunteers were unpaid. The $620 figure is a spending category, not a complete valuation of labor, space, tools, and every other resource used. Existing tools included screwdrivers, pliers, multimeters, and safety glasses.
+
+Volunteers disconnected items from power before opening them and used safety glasses when appropriate. Repairs were stopped during two sessions after signs of overheating were observed. No injuries were reported. The pilot did not include a formal electrical-safety inspection by a licensed technician. A functional test should not be presented as a professional safety certification.
+
+An optional feedback form received 43 responses. Thirty-five respondents described the guidance as useful, six were unsure, and two did not find it useful. These responses concerned perceived usefulness of the guidance. They did not establish whether an item worked afterward, whether a replacement purchase was avoided, or how much money a visitor saved.
+
+The association did not contact participants after they left. There were no observations of performance at home or duration of continued use. The records cannot establish long-term reliability, avoided waste, or avoided purchases. Even the 41 successful end-of-session tests only describe the observed condition at that point in time.
+
+The proposed second pilot would allocate $1,000 to parts, provide another volunteer training session, and ask participants two weeks later whether their items still worked. It would also require a final test entry for every completed repair. These changes have not been approved, no start date has been chosen, and the proposed follow-up has not yet produced any data.
+
+Workshop preparation and work areas
+
+The library meeting room was prepared before public entry so that intake and repair work used different parts of the space. An arriving resident could describe an item at the entrance without walking through tables where tools were in use. Chairs for waiting residents were placed where volunteers could call someone forward without leaving an open item unattended. This arrangement was intended to support the session's workflow. The team did not observe movement systematically, so the layout cannot be used to calculate an average waiting time or measure visitor congestion.
+
+The equipment list distinguished association-owned tools from tools brought by individual volunteers. Labels identified which storage case an item belonged in, and the closing checklist asked volunteers to return tools to the appropriate case. A missing screwdriver or meter lead could then be addressed as a tool-control issue rather than recorded as an expense for a replacement part used in a resident's item. The equipment list described resources available for the workshop; it did not assign a market value to the full collection.
+
+The intake table displayed the accepted item categories and the principal exclusions. Staff used the notice to explain why a large appliance or an item with a damaged lithium battery could not be handled in the room. A conversation about an excluded item did not create a submission record unless the item was accepted into the pilot's documented workflow. The report's category totals therefore describe recorded submissions, and the team did not use informal questions at the door to estimate unmet demand outside the program's scope.
+
+For an accepted item, a volunteer asked the resident to describe the problem in ordinary language before deciding which inspection steps were appropriate. A statement such as an intermittent failure was entered as the resident's description, not as a confirmed diagnosis. The record separated that initial description from the volunteer's later assessment. This distinction allowed a reviewer to see why work began without assuming that every reported symptom had been independently reproduced during the limited time available at the session.
+
+Volunteers discussed how to allocate work according to familiarity with an item and the tools available. Someone comfortable inspecting a lamp might still need assistance with an unfamiliar switching mechanism. A second volunteer could examine the issue before work continued, and the team could stop when its skills were insufficient. That informal consultation was part of the workshop process. The project did not introduce a standardized skills examination or a rating that would support comparing the abilities of individual volunteers in the final report.
+
+Parts were stored in labeled containers so that small components could be identified without searching several worktables. A volunteer who used an available part noted the relevant information on the item record when practical. Unused stock remained association property for later sessions. A container holding spare components did not establish that every component had been purchased during this pilot or installed in a submitted item. The expenditure summary was based on purchases in the accounting records rather than an estimated value of everything visible in the room.
+
+Cleaning materials were stored away from open items and electrical equipment. At closing, volunteers checked the work surfaces for loose screws and other small parts that could belong to a resident's item. They asked residents to keep removable accessories with the associated submission whenever possible. These housekeeping measures supported orderly work and return of items. The team did not undertake a separate loss audit, so a description of its cleaning procedure should not be presented as a measured rate of component retention or proof that no accessory was ever misplaced.
+
+The public session had a fixed closing time. Volunteers were encouraged to explain the remaining work before beginning a procedure that could not reasonably be completed within that period. When an assessment remained unfinished, the record was expected to reflect the actual status at closing rather than the status the volunteer hoped to achieve later. Residents left with their items. The workshop did not create a continuing repair obligation or keep unfinished items in storage for volunteers to work on between Saturdays.
+
+Item inspection and diagnostic limits
+
+Lamp assessment could include examining accessible connections and checking whether a visible component appeared loose or damaged. The precise sequence depended on the design of the item and the volunteer's competence. The team did not require a common diagnostic test for every lamp, and it did not code each inspection step into a research dataset. Consequently, the count of submitted lamps cannot be treated as a count of a particular electrical fault, a standardized assessment, or a uniform repair procedure performed across the category.
+
+Fan assessment involved considering the resident's description alongside the condition observed during the session. Access to moving components required appropriate caution, and a volunteer could decline to continue if a guard or housing could not be handled safely. The project did not record a reliable breakdown of fan problems by mechanism. A report could describe the general assessment approach, but it could not assign numerical shares to motor faults, mechanical obstruction, switching problems, or any other explanation that was not consistently coded.
+
+Toaster work was limited by the ability to inspect the item within the team's skills and equipment. A volunteer could explain a suspected problem without completing a repair. Neither that explanation nor a resident's agreement with it changed the workflow status to repaired. The records did not establish a uniform laboratory procedure for these appliances. The pilot therefore reported item status using its documented categories and avoided implying that all submitted toasters had undergone equivalent electrical or thermal performance testing.
+
+For a hand tool, a volunteer might inspect accessible fastenings, movement, or an obvious mechanical obstruction. Work on one simple mechanism did not imply competence with every type of tool that residents might bring. The same scope rule applied as for other items: the volunteer could stop when the required work exceeded available skills or equipment. The project did not measure the physical force needed to operate tools before and after work, so the final report did not claim a quantified improvement in their mechanical performance.
+
+Reporting scope
+
+The repair pilot documents submissions, distinct visitors, completed repair work, and the subset with successful recorded final tests. Supporting operational information explains how those measures were produced. It does not establish that every repaired item worked or continued operating at home. The proposed later pilot remains unapproved, and its planned record changes and follow-up are not results of the completed sessions.'''
+system_prompt = '''
+You are reviewing a fictional pilot-program report.
+Use only the supplied document and subsequent tool messages.
+Distinguish recorded results from missing information and proposals.
+Do not invent outcomes, measurements, or causal explanations.
+When evidence is insufficient, state the limitation.
+Follow the requested response format and length.'''
+step_instructions = [
+  '''
+Read the document below. Prepare an initial briefing covering: 1. the recorded activity; 2. the main results and relevant costs; 3. what the evidence cannot establish.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Review your initial briefing against the document and the checklist. Provide a revised briefing. Make the meaning of the key counts explicit and explain the main evidence limitation. If the initial briefing was accurate, retain its conclusions.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+  '''
+Write the final briefing for a reader who has not seen the document. Make it self-contained and consistent with the evidence. Do not discuss the review process.
+
+Write 300–400 English words in four sections:
+Activity, Results and resources, Evidence limitations, and Next steps.
+Include the main activity count, the key result or expenditure, and the main evidence limitation.
+Explain what the recorded measures mean and what they cannot show.
+For next steps, you may suggest improvements, but label them as recommendations rather than facts about the pilot.
+If the document lacks detail, explain the missing evidence rather than inventing it. Avoid repeating sentences merely to add length.''',
+]
+tool_calls = 2
+tool_delay_s = 1.0
+tool_results = [
+  '''
+Review checklist loaded:
+- Keep the unit of each count explicit.
+- Distinguish recorded outcomes from unverified outcomes.
+- Do not treat a proposal as an implemented change.
+No additional outcome data are available.''',
+  '''
+Report checklist loaded:
+The final report must include the main activity count, the key recorded outcome or expenditure, and the main evidence limitation.
+No additional outcome data are available.''',
+]
+step_tokens = 768
+final_tokens = 768
+llm_seed = 0
+target_words = [
+  300,
+  400,
+]
+required_facts = [
+  { id = "B1", claim = "There were 96 item submissions from 71 distinct visitors." },
+  { id = "B2a", claim = "There were 58 completed repairs." },
+  { id = "B2b", claim = "Only 41 of the completed repairs had a recorded successful final functional test." },
+  { id = "B3a", claim = "Continued operation at home was unknown." },
+  { id = "B3b", claim = "There was no follow-up after the sessions." },
+]
+doc_target_tokens = 2000
+measured_doc_tokens = 2020
